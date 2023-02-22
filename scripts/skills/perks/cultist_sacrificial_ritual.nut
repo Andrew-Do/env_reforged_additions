@@ -1,5 +1,6 @@
 
-this.sacrificial_ritual <- this.inherit("scripts/skills/skill", {
+//TODO: refactor cultist skills with prefix
+this.cultist_sacrificial_ritual <- this.inherit("scripts/skills/skill", {
 	m = {
 	},
 	function create()

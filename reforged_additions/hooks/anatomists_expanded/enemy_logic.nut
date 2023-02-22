@@ -1,4 +1,5 @@
 //add potion code to actor class
+//TODO: refactor logic to config table
 ::mods_hookExactClass("entity/tactical/actor", function (o)
 {
     o.add_potion <- function(name, complete)
@@ -7,26 +8,16 @@
         {
             case "direwolf":
                 this.getFlags().add("werewolf");
-
-                this.m.Skills.add(::new("scripts/skills/effects/direwolf_potion_effect"));
-                this.m.Skills.add(::new("scripts/skills/perks/perk_ptr_survival_instinct"));
-                this.m.Skills.add(::new("scripts/skills/perks/perk_underdog"));
-                this.m.Skills.add(::new("scripts/skills/perks/perk_ptr_menacing"));
+                // this.m.Skills.add(::new("scripts/skills/effects/direwolf_potion_effect"));
+                // this.m.Skills.add(::new("scripts/skills/perks/perk_ptr_survival_instinct"));
 
                 if (complete)
                 {
                     this.getFlags().add("werewolf_8");
-                    this.m.Skills.removeByID("perk.underdog");
-                    this.m.Skills.add(::new("scripts/skills/perks/perk_legend_battleheart"));
-                    this.m.Skills.add(::new("scripts/skills/perks/perk_ptr_unstoppable"));
                 }
                 break;
             case "ghoul":
                 this.getFlags().add("ghoul");
-                this.m.Skills.add(::new("scripts/skills/effects/hyena_potion_effect"));
-                this.m.Skills.add(::new("scripts/skills/perks/perk_legend_gruesome_feast"));
-                this.m.Skills.add(::new("scripts/skills/perks/perk_legend_alert"));
-                this.m.Skills.add(::new("scripts/skills/perks/perk_killing_frenzy"));
 
                 if (complete)
                 {

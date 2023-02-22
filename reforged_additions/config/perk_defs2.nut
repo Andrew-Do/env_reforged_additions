@@ -49,7 +49,7 @@ local perks = [
 	},
 	{
 		ID = "perk.sacrificial_ritual",
-	    Script = "scripts/skills/perks/sacrificial_ritual",
+	    Script = "scripts/skills/perks/cultist_sacrificial_ritual",
 	    Name = ::Const.Strings.PerkName.SacrificialRitual,
 		Tooltip = ::Const.Strings.PerkDescription.SacrificialRitual,
 		Icon = "ui/perks/sacrificial_ritual.png",
