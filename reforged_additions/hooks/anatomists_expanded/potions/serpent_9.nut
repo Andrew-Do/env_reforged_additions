@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "serpent");
+        ::R.doMutation(_actor, "serpent");
         _actor.getFlags().add("serpent");
 
         //FEATURE_2: serpent potion disabled

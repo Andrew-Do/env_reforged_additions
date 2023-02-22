@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "goblin");
+        ::R.doMutation(_actor, "goblin");
         _actor.getFlags().add("goblin");
 
         //Trait Huge -> Normal -> Tiny
@@ -22,13 +22,13 @@
         _actor.getSkills().add(::new("scripts/skills/effects/goblin_overseer_potion_effect"));
 
         //2: Hair Splitter
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.LegendHairSplitter, 0);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.LegendHairSplitter, 0);
 
         //3 Head Hunter
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.HeadHunter, 1);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.HeadHunter, 1);
 
         //4 Eyes Up
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.PTREyesUp, 2);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.PTREyesUp, 2);
 
         this.Sound.play("sounds/enemies/goblin_hurt_0" + this.Math.rand(0, 3) + ".wav", ::Const.Sound.Volume.Inventory);
         this.Sound.play("sounds/enemies/goblin_death_0" + this.Math.rand(0, 3) + ".wav", ::Const.Sound.Volume.Inventory);

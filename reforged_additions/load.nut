@@ -23,12 +23,12 @@
 
 // ::include("mod_ptr/hooks/hooks_helper.nut")
 
-foreach (file in ::IO.enumerateFiles("legends_additions/config"))
+foreach (file in ::IO.enumerateFiles("reforged_additions/config"))
 {
 	::include(file);
 }
 
-foreach (file in ::IO.enumerateFiles("legends_additions/hooks"))
+foreach (file in ::IO.enumerateFiles("reforged_additions/hooks"))
 {
 	::include(file);
 }

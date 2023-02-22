@@ -13,7 +13,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "schrat");
+        ::R.doMutation(_actor, "schrat");
 
         _actor.getFlags().add("schrat");
         _actor.getFlags().add("schrat_8");

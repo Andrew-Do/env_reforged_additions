@@ -195,7 +195,7 @@ this.sacrificial_ritual <- this.inherit("scripts/skills/skill", {
 
 ::Const.PerkInfo.SacrificialRitual.addPerk <- function(actor, params)
 {
-	::LA.addPerk(actor, params[0], params[1]);
+	::R.addPerk(actor, params[0], params[1]);
 }
 
 ::Const.PerkInfo.SacrificialRitual.lucky <- function(actor, params)

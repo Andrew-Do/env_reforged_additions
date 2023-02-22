@@ -212,7 +212,7 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				party.getController().getBehavior(::Const.World.AI.Behavior.ID.Attack).setEnabled(false);
 				party.setFootprintSizeOverride(0.75);
 
-				local INVESTIGATION_CHANCE = 25 + ::LA.get_tracking_chance();
+				local INVESTIGATION_CHANCE = 25 + ::R.get_tracking_chance();
 				local ROLL = this.Math.rand(1, 100);
 				this.Flags.set("INVESTIGATION_CHANCE", INVESTIGATION_CHANCE);
 				this.Flags.set("INVESTIGATION_ROLL", ROLL);
@@ -556,7 +556,7 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 					Text = "Good pay.",
 					function getResult()
 					{
-						local SUBTERFUGE_CHANCE = 25 + ::LA.get_subterfuge_chance();
+						local SUBTERFUGE_CHANCE = 25 + ::R.get_subterfuge_chance();
 						local ROLL = this.Math.rand(1, 100);
 						this.Flags.set("SUBTERFUGE_CHANCE", SUBTERFUGE_CHANCE);
 						this.Flags.set("SUBTERFUGE_ROLL", ROLL);
@@ -620,7 +620,7 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 					Text = "Let\'s take it for ourselves and try to cover it up.",
 					function getResult()
 					{
-						local SUBTERFUGE_CHANCE = 25 + ::LA.get_subterfuge_chance();
+						local SUBTERFUGE_CHANCE = 25 + ::R.get_subterfuge_chance();
 						local ROLL = this.Math.rand(1, 100);
 						this.Flags.set("SUBTERFUGE_CHANCE", SUBTERFUGE_CHANCE);
 						this.Flags.set("SUBTERFUGE_ROLL", ROLL);

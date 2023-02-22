@@ -13,7 +13,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "alp");
+        ::R.doMutation(_actor, "alp");
         _actor.getFlags().add("alp");
 
         //Add mad, paranoid

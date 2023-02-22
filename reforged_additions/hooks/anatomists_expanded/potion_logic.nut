@@ -34,7 +34,7 @@
 });
 
 //mutation logic - if too many sequences, brother will die
-::LA.doMutation <- function (_actor, _flag)
+::R.doMutation <- function (_actor, _flag)
 {
     local time = 0.0;
     if (("State" in this.World) && this.World.State != null && this.World.State.getCombatStartTime() != 0)
@@ -66,7 +66,7 @@
     this.World.getPlayerRoster().remove(_actor);
 }
 
-// ::LA.addPerk <- function (_actor, _perk_id, _perk_location, _perk, _perk_row)
+// ::R.addPerk <- function (_actor, _perk_id, _perk_location, _perk, _perk_row)
 // {
 //     //if has skill, remove and refund
 //     if (_actor.getSkills().hasSkill(_perk_id))
@@ -82,7 +82,7 @@
 //     _actor.getSkills().add(::new(_perk_location));
 // }
 
-::LA.addPerk <- function (_actor, _perk, _perk_row)
+::R.addPerk <- function (_actor, _perk, _perk_row)
 {
     //if has skill, remove and refund
     if (_actor.getSkills().hasSkill(::Const.Perks.PerkDefObjects[_perk].ID))
@@ -98,7 +98,7 @@
     _actor.getSkills().add(::new(::Const.Perks.PerkDefObjects[_perk].Script));
 }
 
-::LA.removePerk <- function (_actor, _perk_id, _perk)
+::R.removePerk <- function (_actor, _perk_id, _perk)
 {
     //if has skill, remove and refund
     if (_actor.getSkills().hasSkill(_perk_id))

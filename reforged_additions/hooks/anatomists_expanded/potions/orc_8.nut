@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "orc");
+        ::R.doMutation(_actor, "orc");
         _actor.getFlags().add("orc_8");
         _actor.getFlags().add("orc");
 
@@ -19,7 +19,7 @@
         _actor.getSkills().add(::new("scripts/skills/traits/iron_jaw_trait"));
 
         //4 Cull
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.PTRCull, 2);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.PTRCull, 2);
 
         //1 Improved Musculature
         _actor.getSkills().add(::new("scripts/skills/effects/orc_young_potion_effect"));
@@ -28,7 +28,7 @@
         _actor.getSkills().add(::new("scripts/skills/effects/orc_warlord_potion_effect"));
 
         //3 Berserk
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.Berserk, 3);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.Berserk, 3);
 
         this.Sound.play("sounds/enemies/orc_death_0" + this.Math.rand(1, 8) + ".wav", ::Const.Sound.Volume.Inventory);
         this.Sound.play("sounds/enemies/orc_flee_0" + this.Math.rand(1, 3) + ".wav", ::Const.Sound.Volume.Inventory);

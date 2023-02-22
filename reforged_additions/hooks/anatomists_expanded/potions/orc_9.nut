@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "orc");
+        ::R.doMutation(_actor, "orc");
         _actor.getFlags().add("orc");
 
         //Toughen
@@ -25,7 +25,7 @@
         _actor.getSkills().add(::new("scripts/skills/effects/orc_warrior_potion_effect"));
 
         //4 Crippling Strikes
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.CripplingStrikes, 1);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.CripplingStrikes, 1);
 
         this.Sound.play("sounds/enemies/orc_death_0" + this.Math.rand(1, 8) + ".wav", ::Const.Sound.Volume.Inventory);
         this.Sound.play("sounds/enemies/orc_flee_0" + this.Math.rand(1, 3) + ".wav", ::Const.Sound.Volume.Inventory);

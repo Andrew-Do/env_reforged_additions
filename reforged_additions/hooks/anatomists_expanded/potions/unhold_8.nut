@@ -12,7 +12,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "unhold");
+        ::R.doMutation(_actor, "unhold");
         _actor.getFlags().add("unhold");
         _actor.getFlags().add("unhold_8");
 
@@ -27,7 +27,7 @@
         _actor.getSkills().add(::new("scripts/skills/effects/orc_warrior_potion_effect"));
 
         //3 Resilient - Increases the upper limit of gene change for those who know how to use it
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.HoldOut, 2);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.HoldOut, 2);
 
         this.Sound.play("sounds/enemies/unhold_death_0" + this.Math.rand(1, 6) + ".wav", ::Const.Sound.Volume.Inventory);
         this.Sound.play("sounds/enemies/unhold_flee_0" + this.Math.rand(1, 3) + ".wav", ::Const.Sound.Volume.Inventory);

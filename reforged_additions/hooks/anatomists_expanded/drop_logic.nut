@@ -1,4 +1,4 @@
-::LA.drop_potion <- function (_killer, _skill, _tile, _fatalityType, chance, item)
+::R.drop_potion <- function (_killer, _skill, _tile, _fatalityType, chance, item)
 {
 	if (_tile != null && _killer == null || _killer.getFaction() == ::Const.Faction.Player || _killer.getFaction() == ::Const.Faction.PlayerAnimals)
 	{
@@ -31,7 +31,7 @@
 //         onDeath(_killer, _skill, _tile, _fatalityType);
 //         local chance = 2.0;
 //         local item = "scripts/items/misc/anatomist/alp_potion_item";
-//         ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+//         ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
 //     }
 // });
 
@@ -43,7 +43,7 @@
 //         onDeath(_killer, _skill, _tile, _fatalityType);
 //         local chance = 5.0;
 //         local item = "scripts/items/misc/anatomist/geist_potion_item";
-//         ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+//         ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
 //     }
 // });
 
@@ -55,7 +55,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 2.5;
         local item = "scripts/items/misc/anatomist/direwolf_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -67,7 +67,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 5.0;
         local item = "scripts/items/misc/anatomist/goblin_overseer_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -79,7 +79,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 2.5;
         local item = "scripts/items/misc/anatomist/necrosavant_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -91,7 +91,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 5;
         local item = "scripts/items/misc/anatomist/apotheosis_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -105,7 +105,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 0.75;
         local item = "scripts/items/misc/anatomist/goblin_grunt_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -117,7 +117,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 1;
         local item = "scripts/items/misc/anatomist/goblin_grunt_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -131,7 +131,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 2.5;
         local item = "scripts/items/misc/anatomist/orc_young_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -143,7 +143,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 1.25;
         local item = "scripts/items/misc/anatomist/orc_young_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -155,7 +155,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 1.25;
         local item = "scripts/items/misc/anatomist/orc_young_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -167,7 +167,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 1.25;
         local item = "scripts/items/misc/anatomist/orc_young_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -179,7 +179,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 1.25;
         local item = "scripts/items/misc/anatomist/orc_young_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -191,7 +191,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 5;
         local item = "scripts/items/misc/anatomist/orc_warlord_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -205,7 +205,7 @@
 //         onDeath(_killer, _skill, _tile, _fatalityType);
 //         local chance = 2.5;
 //         local item = "scripts/items/misc/anatomist/serpent_potion_item";
-//         ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+//         ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
 //     }
 // });
 
@@ -219,7 +219,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 1.25;
         local item = "scripts/items/misc/anatomist/webknecht_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -231,7 +231,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 2.5;
         local item = "scripts/items/misc/anatomist/wiederganger_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -244,7 +244,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 2.5;
         local item = "scripts/items/misc/anatomist/unhold_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -256,7 +256,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 5;
         local item = "scripts/items/misc/anatomist/ancient_priest_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -269,7 +269,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 1.25;
         local item = "scripts/items/misc/anatomist/nachzehrer_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -281,7 +281,7 @@
         onDeath(_killer, _skill, _tile, _fatalityType);
         local chance = 2.5;
         local item = "scripts/items/misc/anatomist/fallen_hero_potion_item";
-        ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+        ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
     }
 });
 
@@ -295,7 +295,7 @@
 //         onDeath(_killer, _skill, _tile, _fatalityType);
 //         local chance = 5.0;
 //         local item = "scripts/items/misc/anatomist/lindwurm_potion_item";
-//         ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+//         ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
 //     }
 // });
 
@@ -307,7 +307,7 @@
 //         onDeath(_killer, _skill, _tile, _fatalityType);
 //         local chance = 5.0;
 //         local item = "scripts/items/misc/anatomist/orc_warrior_potion_item";
-//         ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+//         ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
 //     }
 // });
 
@@ -320,7 +320,7 @@
 //         onDeath(_killer, _skill, _tile, _fatalityType);
 //         local chance = 5.0;
 //         local item = "scripts/items/misc/anatomist/schrat_potion_item";
-//         ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+//         ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
 //     }
 // });
 
@@ -332,6 +332,6 @@
 //         onDeath(_killer, _skill, _tile, _fatalityType);
 //         local chance = 5.0;
 //         local item = "scripts/items/misc/anatomist/ifrit_potion_item";
-//         ::LA.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
+//         ::R.drop_potion(_killer, _skill, _tile, _fatalityType, chance, item);
 //     }
 // });

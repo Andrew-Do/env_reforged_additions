@@ -14,7 +14,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "vampire");
+        ::R.doMutation(_actor, "vampire");
 		_actor.getFlags().add("vampire");
         _actor.getFlags().add("vampire_8");
 

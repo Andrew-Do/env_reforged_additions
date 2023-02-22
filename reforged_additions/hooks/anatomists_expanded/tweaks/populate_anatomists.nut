@@ -31,7 +31,7 @@
 	}
 });
 
-::LA.addAnatomists <- function (list_of_lists)
+::R.addAnatomists <- function (list_of_lists)
 {
 	foreach (lst in list_of_lists)
 	{
@@ -46,7 +46,7 @@
 	o.create = function()
 	{
 		create();
-		::LA.addAnatomists(this.m.DraftLists);
+		::R.addAnatomists(this.m.DraftLists);
 	}
 });
 
@@ -56,7 +56,7 @@
 	o.create = function()
 	{
 		create();
-		::LA.addAnatomists(this.m.DraftLists);
+		::R.addAnatomists(this.m.DraftLists);
 	}
 });
 
@@ -66,7 +66,7 @@
 	o.create = function()
 	{
 		create();
-		::LA.addAnatomists(this.m.DraftLists);
+		::R.addAnatomists(this.m.DraftLists);
 	}
 });
 
@@ -76,7 +76,7 @@
 	o.create = function()
 	{
 		create();
-		::LA.addAnatomists(this.m.DraftLists);
+		::R.addAnatomists(this.m.DraftLists);
 	}
 });
 

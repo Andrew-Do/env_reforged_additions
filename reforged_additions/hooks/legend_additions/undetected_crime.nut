@@ -4,7 +4,7 @@
     local addPlayerRelation = o.addPlayerRelation;
     o.addPlayerRelation = function(_r, _reason = "")
     {
-        local chance_detection = this.Math.max(5, 60 - ::LA.get_subterfuge_chance());
+        local chance_detection = this.Math.max(5, 60 - ::R.get_subterfuge_chance());
         if (_reason == "Attacked them" && this.Math.rand(1.0, 100.0) > chance_detection) return;
         addPlayerRelation(_r, _reason);
     }
@@ -15,7 +15,7 @@
     local addPlayerRelation = o.addPlayerRelation;
     o.addPlayerRelation = function(_r, _reason = "")
     {
-        local chance_detection = this.Math.max(5, 60 - ::LA.get_subterfuge_chance());
+        local chance_detection = this.Math.max(5, 60 - ::R.get_subterfuge_chance());
         if (_reason == "Attacked them" && this.Math.rand(1, 100) > chance_detection) return;
         addPlayerRelation(_r, _reason);
     }
@@ -26,7 +26,7 @@
     local addPlayerRelation = o.addPlayerRelation;
     o.addPlayerRelation = function(_r, _reason = "")
     {
-        local chance_detection = this.Math.max(5, 60 - ::LA.get_subterfuge_chance());
+        local chance_detection = this.Math.max(5, 60 - ::R.get_subterfuge_chance());
         if (_reason == "Attacked them" && this.Math.rand(1, 100) > chance_detection) return;
         addPlayerRelation(_r, _reason);
     }

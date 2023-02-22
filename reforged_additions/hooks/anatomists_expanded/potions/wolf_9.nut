@@ -11,20 +11,20 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "werewolf");
+        ::R.doMutation(_actor, "werewolf");
         _actor.getFlags().add("werewolf");
 
         //1 Direwolf
         _actor.getSkills().add(::new("scripts/skills/effects/direwolf_potion_effect"));
 
         //2 Survival Instinct
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.PTRSurvivalInstinct, 0);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.PTRSurvivalInstinct, 0);
 
         //3 Underdog
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.Underdog, 1);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.Underdog, 1);
 
         //4 Menacing
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.PTRMenacing, 2);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.PTRMenacing, 2);
 
 
         this.Sound.play("sounds/enemies/werewolf_idle_0" + this.Math.rand(1, 8) + ".wav", ::Const.Sound.Volume.Inventory);

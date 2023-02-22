@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "vampire");
+        ::R.doMutation(_actor, "vampire");
         _actor.getFlags().add("vampire");
 
         //Remove Old
@@ -22,13 +22,13 @@
         _actor.getSkills().add(::new("scripts/skills/effects/necrosavant_potion_effect"));
 
         //2 Darkflight
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.LegendDarkflight, 0);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.LegendDarkflight, 0);
 
         //3 Nine Lives
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.NineLives, 1);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.NineLives, 1);
 
         //4 Lacerate
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.LegendLacerate, 1);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.LegendLacerate, 1);
 
         this.Sound.play("sounds/enemies/vampire_hurt_0" + this.Math.rand(1, 3) + ".wav", ::Const.Sound.Volume.Inventory);
         this.Sound.play("sounds/enemies/vampire_death_0" + this.Math.rand(1, 3) + ".wav", ::Const.Sound.Volume.Inventory);

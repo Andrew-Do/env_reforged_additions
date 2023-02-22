@@ -1,4 +1,4 @@
-::LA.get_subterfuge_chance <- function ()
+::R.get_subterfuge_chance <- function ()
 {
 	local chance = 0;
 	local roster = this.World.getPlayerRoster().getAll();
@@ -26,7 +26,7 @@
 	return chance;
 }
 
-::LA.get_tracking_chance <- function ()
+::R.get_tracking_chance <- function ()
 {
 	local chance = 0;
 	local roster = this.World.getPlayerRoster().getAll();

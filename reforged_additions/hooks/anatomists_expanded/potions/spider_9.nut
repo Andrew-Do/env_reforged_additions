@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "spider");
+        ::R.doMutation(_actor, "spider");
         _actor.getFlags().add("spider");
 
         //Mutated Circulatory System 1
@@ -24,7 +24,7 @@
         _actor.getSkills().add(::new("scripts/skills/effects/serpent_potion_effect"));
 
         //Survival Instinct 4
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.PTRSurvivalInstinct, 0);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.PTRSurvivalInstinct, 0);
 
         this.Sound.play("sounds/enemies/dlc2/giant_spider_death_0" + this.Math.rand(1, 8) + ".wav", ::Const.Sound.Volume.Inventory);
         this.Sound.play("sounds/enemies/dlc2/giant_spider_flee_0" + this.Math.rand(1, 3) + ".wav", ::Const.Sound.Volume.Inventory);

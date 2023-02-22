@@ -138,14 +138,14 @@
 		items.unequip(items.getItemAtSlot(::Const.ItemSlot.Mainhand));
 		items.unequip(items.getItemAtSlot(::Const.ItemSlot.Offhand));
 
-		::LA.addPerk(bros[0], ::Const.Perks.PerkDefs.HoldOut, 2);
+		::R.addPerk(bros[0], ::Const.Perks.PerkDefs.HoldOut, 2);
 		bros[0].getSkills().add(::new("scripts/skills/traits/player_character_trait"));
 		items.equip(::new("scripts/items/helmets/undertaker_hat"));
 		items.equip(::new("scripts/items/armor/undertaker_apron"));
 
-		// ::LA.addPerk(bros[0], ::Const.Perks.PerkDefs.LegendSpecCultHood, 1);
-		// ::LA.addPerk(bros[0], ::Const.Perks.PerkDefs.SacrificialRitual, 2);
-		// ::LA.addPerk(bros[0], ::Const.Perks.PerkDefs.LegendSpecCultArmor, 5);
+		// ::R.addPerk(bros[0], ::Const.Perks.PerkDefs.LegendSpecCultHood, 1);
+		// ::R.addPerk(bros[0], ::Const.Perks.PerkDefs.SacrificialRitual, 2);
+		// ::R.addPerk(bros[0], ::Const.Perks.PerkDefs.LegendSpecCultArmor, 5);
 		
 		// items.equip(::new("scripts/items/weapons/legend_mystic_staff"));
 
@@ -170,7 +170,7 @@
 		items.unequip(items.getItemAtSlot(::Const.ItemSlot.Mainhand));
 		items.unequip(items.getItemAtSlot(::Const.ItemSlot.Offhand));
 
-		::LA.addPerk(bros[1], ::Const.Perks.PerkDefs.HoldOut, 2);
+		::R.addPerk(bros[1], ::Const.Perks.PerkDefs.HoldOut, 2);
 		bros[1].getSkills().add(::new("scripts/skills/traits/player_character_trait"));
 
 		items.equip(::new("scripts/items/helmets/physician_mask"));
@@ -197,7 +197,7 @@
 		items.unequip(items.getItemAtSlot(::Const.ItemSlot.Mainhand));
 		items.unequip(items.getItemAtSlot(::Const.ItemSlot.Offhand));
 
-		::LA.addPerk(bros[2], ::Const.Perks.PerkDefs.HoldOut, 2);
+		::R.addPerk(bros[2], ::Const.Perks.PerkDefs.HoldOut, 2);
 		bros[2].getSkills().add(::new("scripts/skills/traits/player_character_trait"));
 
 		items.equip(::new("scripts/items/helmets/masked_kettle_helmet"));

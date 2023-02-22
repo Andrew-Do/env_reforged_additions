@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "ghoul");
+        ::R.doMutation(_actor, "ghoul");
         _actor.getFlags().add("ghoul");
 
         //Add Gluttonous Trait
@@ -22,13 +22,13 @@
         _actor.getSkills().add(::new("scripts/skills/effects/hyena_potion_effect"));
 
         //1
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.LegendGruesomeFeast, 1);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.LegendGruesomeFeast, 1);
 
         //2
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.LegendAlert, 0);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.LegendAlert, 0);
 
         //3
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.KillingFrenzy, 2);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.KillingFrenzy, 2);
 
         this.Sound.play("sounds/enemies/ghoul_death_0" + this.Math.rand(1, 6) + ".wav", ::Const.Sound.Volume.Inventory);
         this.Sound.play("sounds/enemies/ghoul_flee_0" + this.Math.rand(1, 3) + ".wav", ::Const.Sound.Volume.Inventory);

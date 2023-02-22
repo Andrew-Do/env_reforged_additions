@@ -13,7 +13,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "wurm");
+        ::R.doMutation(_actor, "wurm");
         _actor.getFlags().add("wurm");
 
         _actor.getSkills().add(::new("scripts/skills/traits/perfect_body_trait"));

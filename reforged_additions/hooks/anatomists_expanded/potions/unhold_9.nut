@@ -11,7 +11,7 @@
 
     o.onUse = function(_actor, _item = null)
     {
-        ::LA.doMutation(_actor, "unhold");
+        ::R.doMutation(_actor, "unhold");
         _actor.getFlags().add("unhold");
 
         //Tiny -> Normal -> Huge
@@ -25,10 +25,10 @@
         _actor.getSkills().add(::new("scripts/skills/effects/wiederganger_potion_effect"));
 
         //3 Colossus
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.Colossus, 0);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.Colossus, 0);
 
         //4 Muscularity
-        ::LA.addPerk(_actor, ::Const.Perks.PerkDefs.LegendMuscularity, 1);
+        ::R.addPerk(_actor, ::Const.Perks.PerkDefs.LegendMuscularity, 1);
 
 
         this.Sound.play("sounds/enemies/unhold_death_0" + this.Math.rand(1, 6) + ".wav", ::Const.Sound.Volume.Inventory);
