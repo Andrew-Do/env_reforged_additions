@@ -37,6 +37,13 @@
 	{ 
 		if ( !(this.m.ID in ::R.Backgrounds.Specialties) ) return [];
 		local ret = [];
+        // TODO: if anatomist
+        // {
+        //     id = 3,
+        //     type = "hint",
+        //     icon = "ui/icons/special.png",
+        //     text = "Has a chance (depending on the monster) to concoct sequence potions from all monsters killed in battle"
+        // }
 		foreach (key, value in ::R.Backgrounds.Specialties[this.m.ID]) {
 			ret.push({
 				id = 3,
@@ -53,6 +60,8 @@
 		if ( !(this.m.ID in ::R.Backgrounds.Specialties) ) return this.getDescription();
 
 		local tooltip = "";
+        // TODO: if anatomist
+        //Anatomists can concoct sequence potions from the remains of monsters.
 		foreach (key, value in ::R.Backgrounds.Specialties[this.m.ID]) {
 			tooltip += format(" +%d %s.", value, key);
 		}
