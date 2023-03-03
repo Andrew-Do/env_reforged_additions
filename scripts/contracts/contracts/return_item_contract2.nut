@@ -335,10 +335,71 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 		});
 	}
 
+	function onPrepareVariables( _vars )
+	{
+		_vars.push([
+			"direction",
+			this.m.Target == null || this.m.Target.isNull() ? "" : ::Const.Strings.Direction8[this.World.State.getPlayer().getTile().getDirection8To(this.m.Target.getTile())]
+		]);
+		_vars.push([
+			"item",
+			this.m.Flags.get("IsLockbox") ? "lockbox" : this.m.Flags.get("LOOT_NAME")
+		]);
+		_vars.push([
+			"bribe",
+			this.m.Flags.get("Bribe")
+		]);
+	}
+
+	function onClear()
+	{
+		if (!this.m.IsActive) return;
+		if (this.m.Target != null && !this.m.Target.isNull())
+		{
+			this.m.Target.getSprite("selection").Visible = false;
+			this.m.Target.setOnCombatWithPlayerCallback(null);
+		}
+		this.m.Home.getSprite("selection").Visible = false;
+	}
+
+	function onIsValid()
+	{
+		return true;
+	}
+
+	function onSerialize( _out )
+	{
+		if (this.m.Target != null && !this.m.Target.isNull())
+		{
+			_out.writeU32(this.m.Target.getID());
+		}
+		else
+		{
+			_out.writeU32(0);
+		}
+
+		this.contract.onSerialize(_out);
+	}
+
+	function onDeserialize( _in )
+	{
+		local target = _in.readU32();
+
+		if (target != 0)
+		{
+			this.m.Target = this.WeakTableRef(this.World.getEntityByID(target));
+		}
+
+		this.contract.onDeserialize(_in);
+	}
+
 	function createScreens()
 	{
 		this.importScreens(::Const.Contracts.NegotiationDefault);
 		this.importScreens(::Const.Contracts.Overview);
+
+
+		
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "Negotiations",
@@ -371,6 +432,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 			}
 
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Investigation",
 			Title = "Investigation",
@@ -438,6 +502,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				});
 			}
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Bandits",
 			Title = "As you approach...",
@@ -456,6 +523,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				}
 			]
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Necromancer",
 			Title = "As you approach...",
@@ -477,6 +547,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				}
 			]
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Cultists",
 			Title = "As you approach...",
@@ -495,6 +568,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				}
 			]
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Anatomist",
 			Title = "As you approach...",
@@ -519,6 +595,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				}
 			]
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "CounterOffer1",
 			Title = "After the battle...",
@@ -545,6 +624,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				}
 			]
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "CounterOffer2",
 			Title = "After the battle...",
@@ -589,6 +671,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 			}
 
 		});
+
+		
+
 		this.m.Screens.push({
 			ID = "BattleDone",
 			Title = "After the battle...",
@@ -657,6 +742,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				});
 			}
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Lockbox",
 			Title = "Opening the lockbox...",
@@ -682,6 +770,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				});
 			}
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Subterfuge",
 			Title = "Subterfuge",
@@ -736,6 +827,9 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				});
 			}
 		});
+
+
+
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "On your return...",
@@ -770,6 +864,10 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 			}
 
 		});
+
+
+
+
 		this.m.Screens.push({
 			ID = "Failure1",
 			Title = "Along the way...",
@@ -793,63 +891,5 @@ this.return_item_contract2 <- this.inherit("scripts/contracts/contract", {
 				}
 			]
 		});
-	}
-
-	function onPrepareVariables( _vars )
-	{
-		_vars.push([
-			"direction",
-			this.m.Target == null || this.m.Target.isNull() ? "" : ::Const.Strings.Direction8[this.World.State.getPlayer().getTile().getDirection8To(this.m.Target.getTile())]
-		]);
-		_vars.push([
-			"item",
-			this.m.Flags.get("IsLockbox") ? "lockbox" : this.m.Flags.get("LOOT_NAME")
-		]);
-		_vars.push([
-			"bribe",
-			this.m.Flags.get("Bribe")
-		]);
-	}
-
-	function onClear()
-	{
-		if (!this.m.IsActive) return;
-		if (this.m.Target != null && !this.m.Target.isNull())
-		{
-			this.m.Target.getSprite("selection").Visible = false;
-			this.m.Target.setOnCombatWithPlayerCallback(null);
-		}
-		this.m.Home.getSprite("selection").Visible = false;
-	}
-
-	function onIsValid()
-	{
-		return true;
-	}
-
-	function onSerialize( _out )
-	{
-		if (this.m.Target != null && !this.m.Target.isNull())
-		{
-			_out.writeU32(this.m.Target.getID());
-		}
-		else
-		{
-			_out.writeU32(0);
-		}
-
-		this.contract.onSerialize(_out);
-	}
-
-	function onDeserialize( _in )
-	{
-		local target = _in.readU32();
-
-		if (target != 0)
-		{
-			this.m.Target = this.WeakTableRef(this.World.getEntityByID(target));
-		}
-
-		this.contract.onDeserialize(_in);
 	}
 });

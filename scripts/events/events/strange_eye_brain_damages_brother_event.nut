@@ -10,13 +10,13 @@ this.strange_eye_brain_damages_brother_event <- this.inherit("scripts/events/eve
 		this.m.Cooldown = 20.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{A loud cry startles all the men. They quickly find out the source is %addict% who has collapsed to the ground and is spasming. Gone is the strange eye that your company has recently acquired. Moments later %addict% comes to. They seem to be alright, but not entirely there in the head, but they say that they've never felt better.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{A loud cry startles all the men. They quickly find out the source is %addict% who has collapsed to the ground and is spasming. Moments later %addict% comes to. They seem to be alright, but not entirely there in the head, but they say that they've never felt better.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I just hope they'll be alright.",
+					Text = "Grant us eyes...",
 					function getResult( _event )
 					{
 						return 0;
@@ -62,11 +62,8 @@ this.strange_eye_brain_damages_brother_event <- this.inherit("scripts/events/eve
 
 	function onUpdateScore()
 	{
-		if (!::Const.DLC.Unhold)
-		{
-			return;
-		}
-
+		if (!::Const.DLC.Unhold) return;
+		
 		local brothers = this.World.getPlayerRoster().getAll();
 		local canditates_brain_damage = [];
 
@@ -86,16 +83,14 @@ this.strange_eye_brain_damages_brother_event <- this.inherit("scripts/events/eve
 			}
 		}
 
-		if (canditates_brain_damage.len() == 0) return;
+		if (canditates_brain_damage.len() < 1) return;
 
-		this.m.Addict = canditates_brain_damage[this.Math.rand(0, canditates_brain_damage.len() - 1)];
+		this.m.Addict = ::MSU.Array.rand(canditates_brain_damage);
 		this.m.Item = ::new("scripts/items/misc/strange_eye_item");
-		this.m.Score = canditates_brain_damage.len() * 100;
+		this.m.Score = canditates_brain_damage.len() * 50;
 	}
 
-	function onPrepare()
-	{
-	}
+	function onPrepare(){}
 
 	function onPrepareVariables( _vars )
 	{
