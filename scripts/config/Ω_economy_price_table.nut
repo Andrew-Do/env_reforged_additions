@@ -1,3 +1,14 @@
+//FEATURE_1: Change prices to Harnmaster prices
+//FEATURE_1: write code to replace item prices, hook all descendants
+
+//FEATURE_1: attached location overwrite draft & shop logic
+//FEATURE_1: city overwrite draft & shop logic
+
+//FEATURE_1: rebalance wages/backgrounds costs
+//FEATURE_1: overhaul contract pay
+
+//FEATURE_1: overhaul enemy equipment/builds
+
 ::Const.Economy <- {};
 ::Const.Economy.PriceTable <- {
 	//Supplies

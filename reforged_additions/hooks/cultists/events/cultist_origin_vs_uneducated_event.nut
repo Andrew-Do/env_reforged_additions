@@ -1,3 +1,4 @@
+//TODO: Check
 ::mods_hookExactClass("events/events/dlc4/cultist_origin_vs_uneducated_event", function (o)
 {
 	o.create = function()

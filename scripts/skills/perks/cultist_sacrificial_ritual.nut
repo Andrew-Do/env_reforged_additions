@@ -1,5 +1,6 @@
 
 //TODO: refactor cultist skills with prefix
+//TODO: check and complete transition to reforged, remove all legends dependencies, clean and refactor code
 this.cultist_sacrificial_ritual <- this.inherit("scripts/skills/skill", {
 	m = {
 	},

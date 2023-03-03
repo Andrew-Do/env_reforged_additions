@@ -35,10 +35,43 @@
 "\n• On turn start, gaze into the soul of a non-ally, and have a 44% chance to morale check and to drain them." +
 "\n• The range of the effect is this character's vision. They become unaffected by night time";
 
+::Const.Strings.PerkName.Devotion = "Devotion"
+::Const.Strings.PerkDescription.Devotion = "In Pain we find the truth of ourselves. We have no identity beyond servitude, our glory is agony."+
+"\n\n[color=" + ::Const.UI.Color.Passive + "][u]Passive:[/u][/color]" +
+"\n• With face obscured by a cultist hood, gain " + ::MSU.Text.colorGreen( 15 ) + "% of your base resolve as a bonus to melee and ranged defense." +
+"\n• Unwillingness to avoid pain decreases the effectiveness of the Dodge to 5% of initiative." + 
+"\n• Each permenant injury increases this bonus by  " + ::MSU.Text.colorGreen( "5%" ) +
+"\n• Also works with cultist leather hood, leather helmet, sack, decayed sack helm, warlock hood or mask of davkul." +
+"\n• Will refund dodge.";
 
+::Const.Strings.PerkName.Penance = "Penance"
+::Const.Strings.PerkDescription.Penance = "One has wounds but cannot be wounded..."+
+"\n\n[color=" + ::Const.UI.Color.Passive + "][u]Passive:[/u][/color]" +
+"\n• Morale is no longer affected by allies dying or by taking damage." +
+"\n• Reduce the effects that permenant injuries has on this character or transform the injury in some eldritch way.";
 
 local perks = [
-    {
+	//TODO: create penance perk
+	{
+		ID = "perk.devotion",
+	    Script = "scripts/skills/perks/cultist_devotion",
+	    Name = ::Const.Strings.PerkName.Devotion,
+		Tooltip = ::Const.Strings.PerkDescription.Devotion,
+		Icon = "ui/perks/dedication_circle2.png",
+        IconDisabled = "ui/perks/dedication_circle2_bw.png",
+        Const = "Devotion"
+	},
+	//TODO: create devotion perk
+	{
+		ID = "perk.penance",
+	    Script = "scripts/skills/perks/cultist_penance",
+	    Name = ::Const.Strings.PerkName.Penance,
+		Tooltip = ::Const.Strings.PerkDescription.Penance,
+		Icon = "ui/perks/penance_circle2.png",
+        IconDisabled = "ui/perks/penance_circle2_bw.png",
+        Const = "Penance"
+	},
+	{
 		ID = "perk.eldritch_blast",
 	    Script = "scripts/skills/perks/cultist_eldritch_blast",
 	    Name = ::Const.Strings.PerkName.EldritchBlast,

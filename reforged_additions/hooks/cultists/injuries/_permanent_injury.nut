@@ -2,7 +2,7 @@
 {  
     o.has_penance <- function()
     {
-        return this.getContainer() != null && this.getContainer().hasSkill("perk.legend_specialist_cult_armor")
+        return this.getContainer() != null && this.getContainer().hasSkill("perk.penance")
     }
 
     o.getName <- function()
@@ -60,7 +60,5 @@
         local ret = [];
         return ret;
     }
-
-    
 
 });

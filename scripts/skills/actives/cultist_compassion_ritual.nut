@@ -1,4 +1,4 @@
-this.compassion_ritual <- this.inherit("scripts/skills/skill", {
+this.cultist_compassion_ritual <- this.inherit("scripts/skills/skill", {
 	m = {
 		isWindow = false
 	},

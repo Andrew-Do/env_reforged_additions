@@ -35,37 +35,46 @@
 {
 	o.getBackgroundTooltip <- function()
 	{ 
-		if ( !(this.m.ID in ::R.Backgrounds.Specialties) ) return [];
 		local ret = [];
-        // TODO: if anatomist
-        // {
-        //     id = 3,
-        //     type = "hint",
-        //     icon = "ui/icons/special.png",
-        //     text = "Has a chance (depending on the monster) to concoct sequence potions from all monsters killed in battle"
-        // }
-		foreach (key, value in ::R.Backgrounds.Specialties[this.m.ID]) {
+		if ( this.m.ID == "background.anatomist")
+		{
 			ret.push({
 				id = 3,
 				type = "hint",
 				icon = "ui/icons/special.png",
-				text = format("+%d %s for relevant checks.", value, key)
+				text = "Has a chance (depending on the monster) to concoct sequence potions from all monsters killed in battle"
 			});
+		}
+
+		if ( this.m.ID in ::R.Backgrounds.Specialties )
+		{
+			foreach (key, value in ::R.Backgrounds.Specialties[this.m.ID]) {
+				ret.push({
+					id = 3,
+					type = "hint",
+					icon = "ui/icons/special.png",
+					text = format("+%d %s for relevant checks.", value, key)
+				});
+			}
 		}
 		return ret; 
 	}
 	
 	o.getDescription <- function()
 	{
-		if ( !(this.m.ID in ::R.Backgrounds.Specialties) ) return this.getDescription();
-
 		local tooltip = "";
-        // TODO: if anatomist
-        //Anatomists can concoct sequence potions from the remains of monsters.
-		foreach (key, value in ::R.Backgrounds.Specialties[this.m.ID]) {
-			tooltip += format(" +%d %s.", value, key);
+
+		if ( this.m.ID == "background.anatomist" )
+			tooltip += " Anatomists can concoct sequence potions from the remains of monsters.";
+		
+		if ( this.m.ID in ::R.Backgrounds.Specialties )
+		{
+			foreach (key, value in ::R.Backgrounds.Specialties[this.m.ID]) {
+				tooltip += format(" +%d %s.", value, key);
+			}
 		}
-		return this.getDescription() + tooltip;
+
+		return tooltip == "" ? this.getDescription() : + this.getDescription() + tooltip;
 	}
 
     local getTooltip = "getTooltip" in o ? o.getTooltip : null;

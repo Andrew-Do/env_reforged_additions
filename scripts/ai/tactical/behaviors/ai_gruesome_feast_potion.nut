@@ -1,3 +1,5 @@
+//TODO: recreate legends gruesome feast
+//TODO: recreate legends gruesome feast ai
 this.ai_gruesome_feast_potion <- this.inherit("scripts/ai/tactical/behavior", {
 	m = {
 		TargetTile = null,

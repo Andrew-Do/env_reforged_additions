@@ -1,4 +1,4 @@
-this.pain_ritual <- this.inherit("scripts/skills/skill", {
+this.cultist_pain_ritual <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()
 	{

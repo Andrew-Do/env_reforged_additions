@@ -1,3 +1,4 @@
+//TODO: Check
 //changed the cooldown of cultist conversion to a week. Made the event more common
 ::mods_hookExactClass("events/events/cultist_vs_uneducated_event", function (o)
 {

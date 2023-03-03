@@ -1,3 +1,4 @@
+//TODO: refactor all actives with prefix
 this.anguish <- this.inherit("scripts/skills/magic_skill", {
 	m = {},
 	function create()
