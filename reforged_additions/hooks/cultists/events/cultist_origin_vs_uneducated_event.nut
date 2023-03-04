@@ -1,4 +1,3 @@
-//TODO: Check
 ::mods_hookExactClass("events/events/dlc4/cultist_origin_vs_uneducated_event", function (o)
 {
 	o.create = function()
@@ -57,15 +56,15 @@
 			{
 				this.Characters.push(_event.m.Cultist.getImagePath());
 				this.Characters.push(_event.m.Uneducated.getImagePath());
-				_event.m.Uneducated.getBackground().Convert();
-				_event.m.Uneducated.getBackground().m.RawDescription += " " + _event.m.Cultist.getName() + " helped " + _event.m.Uneducated.getName() + " see the darkness.";
-				_event.m.Uneducated.getBackground().buildDescription(true);
-				_event.m.Uneducated.getBaseProperties().DailyWage -= _event.m.Uneducated.getDailyCost() / 2;
-				_event.m.Uneducated.getSkills().update();
+				local background = this.new("scripts/skills/backgrounds/converted_cultist_background");
+				_event.m.Uneducated.getSkills().removeByID(_event.m.Uneducated.getBackground().getID());
+				_event.m.Uneducated.getSkills().add(background);
+				background.buildDescription();
+				background.onSetAppearance();
 				this.List = [
 					{
 						id = 13,
-						icon = _event.m.Uneducated.getBackground().getIcon(),
+						icon = background.getIcon(),
 						text = _event.m.Uneducated.getName() + " has been converted to a Cultist"
 					}
 				];
@@ -74,7 +73,7 @@
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Cultist.getName() + " gains [color=" + ::Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Cultist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
 				});
 			}
 
