@@ -1,9 +1,3 @@
-//TODO: hook to add 
-//this.addItemType(this.Const.Items.ItemType.Cultist);
-//to cultist items
-
-//TODO: in config add cultist item type
-// ::Const.Items.ItemType[Cultist] <- 4194304;
 this.cultist_devotion <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()

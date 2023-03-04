@@ -172,7 +172,7 @@ this.cultist_pain_ritual <- this.inherit("scripts/skills/skill", {
 		local agent = actor.getAIAgent();
 		if (agent.findBehavior(::Const.AI.Behavior.ID.PainRitual) == null)
 		{
-			agent.addBehavior(::new("scripts/ai/tactical/behaviors/ai_pain_ritual"));
+			agent.addBehavior(::new("scripts/ai/tactical/behaviors/ai_cultist_pain_ritual"));
 			agent.finalizeBehaviors();
 		}
 	}

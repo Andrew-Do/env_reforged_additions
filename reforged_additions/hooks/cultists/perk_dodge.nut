@@ -1,3 +1,4 @@
+//Make it so adding the dodge perk refunds devotion, logic is vice versa
 ::mods_hookExactClass("skills/perks/perk_dodge", function (o)
 {
 	o.onAdded <- function()

@@ -1,15 +1,15 @@
-this.ai_compassion_ritual <- this.inherit("scripts/ai/tactical/behavior", {
+this.ai_cultist_pain_ritual <- this.inherit("scripts/ai/tactical/behavior", {
 	m = {
 		TargetTile = null,
 		PossibleSkills = [
-			"actives.compassion_ritual"
+			"actives.pain_ritual"
 		],
 		SelectedSkill = null
 	},
 	function create()
 	{
-		this.m.ID = ::Const.AI.Behavior.ID.CompassionRitual;
-		this.m.Order = ::Const.AI.Behavior.Order.CompassionRitual;
+		this.m.ID = ::Const.AI.Behavior.ID.PainRitual;
+		this.m.Order = ::Const.AI.Behavior.Order.PainRitual;
 		this.behavior.create();
 	}
 
@@ -66,7 +66,12 @@ this.ai_compassion_ritual <- this.inherit("scripts/ai/tactical/behavior", {
 			score = score * ::Const.AI.Behavior.AttackAfterSwitchWeaponMult;
 		}
 
-		return ::Const.AI.Behavior.Score.Attack * score * 100;
+		if (this.Math.rand(1,100) > 33)
+		{
+			return ::Const.AI.Behavior.Score.Zero;
+		}
+
+		return ::Const.AI.Behavior.Score.Attack * score * 2;
 	}
 
 	function onBeforeExecute( _entity )

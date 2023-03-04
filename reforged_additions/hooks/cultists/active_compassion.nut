@@ -1,3 +1,4 @@
+//add compassion sprite to actor
 ::mods_hookExactClass("entity/tactical/actor", function (o)
 {
     local addDefaultStatusSprites = o.addDefaultStatusSprites;

@@ -388,7 +388,7 @@ this.cultist_eldritch_blast <- this.inherit("scripts/skills/skill", {
 		local agent = actor.getAIAgent();
 		if (agent.findBehavior(::Const.AI.Behavior.ID.EldritchBlast) == null)
 		{
-			agent.addBehavior(::new("scripts/ai/tactical/behaviors/ai_eldritch_blast"));
+			agent.addBehavior(::new("scripts/ai/tactical/behaviors/ai_cultist_eldritch_blast"));
 			agent.finalizeBehaviors();
 		}
 	}

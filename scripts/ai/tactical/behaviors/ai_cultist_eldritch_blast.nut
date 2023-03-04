@@ -1,15 +1,15 @@
-this.ai_pain_ritual <- this.inherit("scripts/ai/tactical/behavior", {
+this.ai_cultist_eldritch_blast <- this.inherit("scripts/ai/tactical/behavior", {
 	m = {
 		TargetTile = null,
 		PossibleSkills = [
-			"actives.pain_ritual"
+			"actives.eldritch_blast"
 		],
 		SelectedSkill = null
 	},
 	function create()
 	{
-		this.m.ID = ::Const.AI.Behavior.ID.PainRitual;
-		this.m.Order = ::Const.AI.Behavior.Order.PainRitual;
+		this.m.ID = ::Const.AI.Behavior.ID.EldritchBlast;
+		this.m.Order = ::Const.AI.Behavior.Order.EldritchBlast;
 		this.behavior.create();
 	}
 
@@ -66,10 +66,10 @@ this.ai_pain_ritual <- this.inherit("scripts/ai/tactical/behavior", {
 			score = score * ::Const.AI.Behavior.AttackAfterSwitchWeaponMult;
 		}
 
-		if (this.Math.rand(1,100) > 33)
-		{
-			return ::Const.AI.Behavior.Score.Zero;
-		}
+		// if (this.Math.rand(1,100) > 33)
+		// {
+		// 	return ::Const.AI.Behavior.Score.Zero;
+		// }
 
 		return ::Const.AI.Behavior.Score.Attack * score * 2;
 	}
