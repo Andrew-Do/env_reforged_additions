@@ -51,7 +51,6 @@
 "\n• Reduce the effects that permenant injuries has on this character or transform the injury in some eldritch way.";
 
 local perks = [
-	//TODO: create penance perk
 	{
 		ID = "perk.devotion",
 	    Script = "scripts/skills/perks/cultist_devotion",
@@ -61,7 +60,6 @@ local perks = [
         IconDisabled = "ui/perks/dedication_circle2_bw.png",
         Const = "Devotion"
 	},
-	//TODO: create devotion perk
 	{
 		ID = "perk.penance",
 	    Script = "scripts/skills/perks/cultist_penance",

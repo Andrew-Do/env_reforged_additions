@@ -1,4 +1,3 @@
-//TODO: refactor name
 this.cultist_eldritch_blast_toggle <- this.inherit("scripts/skills/skill", {
 	m = {
 		IsOn = false	
