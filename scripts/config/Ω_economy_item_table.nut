@@ -1,23 +1,54 @@
-//FEATURE_1: Change prices to Harnmaster prices
-//FEATURE_1: write code to replace item prices, hook all descendants
+//TODO: generate attached locations table
+//TODO: generate city shops table
+//TODO: generate monster loot table
+//TODO: Change prices to Harnmaster prices
+//TODO: write code to replace item prices, hook all descendants
 
-//FEATURE_1: attached location overwrite draft & shop logic
-//FEATURE_1: city overwrite draft & shop logic
-
+//FEATURE_1: draft logic
 //FEATURE_1: rebalance wages/backgrounds costs
 //FEATURE_1: overhaul contract pay
-
 //FEATURE_1: overhaul enemy equipment/builds
+
+
+// 4 gallons of ale: 1 Pence
+// 1 hen: 5 Pence
+// Brass pot: 2-13 Shillings
+// Crossbow: 12 Pence (today’s retail price, several 100$)
+// 1 Quiver of crossbow bolts: 16 Pence
+// 1 cart-horse: Up to 32 Shillings
+
+//bros will eat 2.0 (DailyFood) units per day
+//food unit is 25 so it will last 12 meals
+//calculate cost per meal
+
+// 12 Pence = 1 Shilling
+// 10 Shilling = 1 £
+
+// Horse harness maker: 4 Pence / Day
+// Mason: 6 Pence / Day
+// Laborer: 3,5 Pence / Day
+
+//levied spearmen 2 Pence / Day
+//!!!! pay of soldiers includes food and looting
+
+
+
+// Levied spearman: 2 Pence / Day
+// Archer: 3 Pence / Day
+// Knight bachelor: 24 p / Day
+// Knight banneret: 48 p / Day
+
+//base unit is pence
 
 ::Const.Economy <- {};
 ::Const.Economy.PriceTable <- {
 	//Supplies
-	"supplies.ground_grains" : 50,
-	"supplies.strange_meat" : 50,
+	"supplies.ground_grains" : 50, //8/50lb | 25
+	"supplies.strange_meat" : 50, //2/lb | 25
 	"supplies.rice" : 60,
 	"supplies.roots_and_berries" : 60,
-	"supplies.bread" : 65,
-	"supplies.dried_fish" : 70,
+	"supplies.bread" : 65, //6.25 d|25 units
+	"supplies.dried_fish" : 70, //2d/lb || 25d / 25 units
 	"supplies.pickled_mushrooms" : 70,
 	"supplies.beer" : 75,
 	"supplies.dates" : 80,
@@ -26,13 +57,13 @@
 	"supplies.goat_cheese" : 85,
 	"supplies.mead" : 90,
 	"supplies.cured_venison" : 95,
-	"supplies.smoked_ham" : 95,
+	"supplies.smoked_ham" : 95, //50d/25 units
 	"supplies.ammo" : 100,
 	"supplies.dried_lamb" : 105,
 	"supplies.wine" : 110,
 	"supplies.preserved_mead" : 120,
 	"supplies.cured_rations" : 150,
-	"supplies.fermented_unhold_heart" : 150,
+	"supplies.fermented_unhold_heart" : 0,
 	"supplies.armor_parts" : 200,
 	"supplies.medicine" : 200,
 

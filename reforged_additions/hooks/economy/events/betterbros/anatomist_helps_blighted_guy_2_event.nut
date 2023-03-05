@@ -1,4 +1,4 @@
-//FEATURE_1: Event bros have a better chance of high rolling logical stars - fixes problem of getting bro with event and then firing him
+//FEATURE_2: Event bros have a better chance of high rolling logical stars - fixes problem of getting bro with event and then firing him
 //FEATURE_1: Create feature doc
 ::mods_hookExactClass("events/events/dlc8/anatomist_helps_blighted_guy_2_event", function (o)
 {

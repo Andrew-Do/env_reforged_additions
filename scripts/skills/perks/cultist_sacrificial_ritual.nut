@@ -63,6 +63,7 @@ this.cultist_sacrificial_ritual <- this.inherit("scripts/skills/skill", {
 
 	function getTotalKillStats()
 	{
+		//TODO: adapt to reforged
 		return ::Const.LegendMod.GetFavoriteEnemyStats(this.getContainer().getActor(), this.m.ValidTypes);
 	}
 
