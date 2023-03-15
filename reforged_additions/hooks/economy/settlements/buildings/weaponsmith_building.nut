@@ -287,7 +287,6 @@
 		this.fillStash(list, this.m.Stash, 1.25, false);
 	}
 
-	//TODO: weaponsmith draft additions
     o.onUpdateDraftList <- function( _list )
 	{
 	}

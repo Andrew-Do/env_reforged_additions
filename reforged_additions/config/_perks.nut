@@ -56,7 +56,7 @@
 "\n• Morale is no longer affected by allies dying or by taking damage." +
 "\n• Reduce the effects that permenant injuries has on this character or transform the injury in some eldritch way.";
 
-//TODO: adapt perks to reforged
+//FEATURE_6: adapt perks to reforged
 // local perks = [
 // 	{
 // 		ID = "perk.devotion",

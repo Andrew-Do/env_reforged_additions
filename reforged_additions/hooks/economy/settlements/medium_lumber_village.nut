@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_lumber_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Westerholz",
-			"Langholz",
-			"Grossholz",
-			"Tanndorf",
-			"Waldhain",
-			"Elkshorn",
-			"Dunkeltal",
-			"Eichholz",
-			"Eulenkrug",
-			"Nordholz",
-			"Finsterwalde",
-			"Damwald",
-			"Tannheim",
-			"Filzmoos",
-			"Dunkelwald",
-			"Hagermoos",
-			"Neufarn",
-			"Taubenmoos",
-			"Waidhof",
-			"Waidtal",
-			"Eichendorf",
-			"Holzschlag",
-			"Hirschbach",
-			"Friedewald",
-			"Talbach",
-			"Finsterweiler",
-			"Tannenweiler",
-			"Weilersheim",
-			"Grunforst",
-			"Tiefenforst",
-			"Schwarzforst"
-		]);
+		create();
 		this.m.DraftList = [
 			"beggar_background",
 			"bowyer_background",
@@ -60,32 +28,9 @@
 			"witchhunter_background",
 			"cripple_background",
 			"eunuch_background",
-			"anatomist_background"
+			"anatomist_background",
+			"beast_hunter_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		this.m.UIDescription = "A developed village thriving on lumber and game";
-		this.m.Description = "An established village close to the forest living mainly from lumber cutting and game.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_02.png";
-		this.m.Sprite = "world_townhall_02";
-		this.m.Lighting = "world_townhall_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsForestSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
-		this.m.ProduceString = "wood";
 	}
 
 	o.onBuild = function()

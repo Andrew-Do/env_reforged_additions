@@ -1,35 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_steppe_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Wohlen",
-			"Krauchthal",
-			"Brunnenthal",
-			"Erlach",
-			"Treiten",
-			"Tentlingen",
-			"Himmelsdorf",
-			"Thurn",
-			"Subingen",
-			"Thunstetten",
-			"Rothenbach",
-			"Sandheim",
-			"Sonstedt",
-			"Siegau",
-			"Strohdorf",
-			"Sonnheim",
-			"Sandfels",
-			"Sonnfels",
-			"Strauchdorf",
-			"Kargau",
-			"Attendorn",
-			"Sudheim",
-			"Krauchdorf",
-			"Dornen",
-			"Dornthal",
-			"Dornheim"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -54,36 +27,12 @@
 			"vagabond_background",
 			"adventurous_noble_background",
 			"cripple_background",
-			"poacher_background"
+			"poacher_background",
+			"caravan_hand_southern_background",
+			"peddler_southern_background",
+			"beggar_southern_background",
+			"cripple_southern_background"
 		];
-
-		if (this.Const.DLC.Desert)
-		{
-			this.m.DraftList.extend([
-				"caravan_hand_southern_background",
-				"peddler_southern_background",
-				"beggar_southern_background",
-				"cripple_southern_background"
-			]);
-		}
-
-		this.m.UIDescription = "An established and thriving settlement in the steppe";
-		this.m.Description = "An established settlement surrounded by the dry and flat lands of the steppe.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_02.png";
-		this.m.Sprite = "world_townhall_02";
-		this.m.Lighting = "world_townhall_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsSteppeSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

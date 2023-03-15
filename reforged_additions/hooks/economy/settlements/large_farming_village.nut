@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_farming_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Weidemark",
-			"Hemmelmark",
-			"Kochenland",
-			"Altenstadt",
-			"Schnellmark",
-			"Neumark",
-			"Freistadt",
-			"Weissenstadt",
-			"Muhlstadt",
-			"Grunmark",
-			"Ivenstadt",
-			"Grafenstadt",
-			"Konigsland",
-			"Dreigrafen",
-			"Koppelstadt",
-			"Varelmark",
-			"Hageland",
-			"Dulmen",
-			"Wiesenmark",
-			"Heuland",
-			"Auenmark",
-			"Kornstadt",
-			"Konigsheim",
-			"Wedelmark",
-			"Albstadt",
-			"Kammersmark",
-			"Adelsland",
-			"Heldenland",
-			"Dinkelsmark",
-			"Schwanstadt",
-			"Grunhain"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -73,23 +41,6 @@
 			"squire_background",
 			"anatomist_background"
 		];
-		this.m.UIDescription = "A large city thriving on trade and agriculture";
-		this.m.Description = "A large city surrounded by lush green meadows, orchards and fields. Food stocks are usually filled to the brim.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/townhall_03.png";
-		this.m.Sprite = "world_townhall_03";
-		this.m.Lighting = "world_townhall_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsFarmingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 5;
-		this.m.AttachedLocationsMax = 6;
 	}
 
 	o.onBuild = function()

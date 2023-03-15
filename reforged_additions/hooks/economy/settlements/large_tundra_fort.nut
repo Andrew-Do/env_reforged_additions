@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_tundra_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tonderborg",
-			"Hornborg",
-			"Grimborg",
-			"Helleborg",
-			"Kalkborg",
-			"Lydersborg",
-			"Homsborg",
-			"Sommersborg",
-			"Brammingborg",
-			"Vardeborg",
-			"Norreborg",
-			"Birkeborg",
-			"Donnersborg",
-			"Tangborg",
-			"Helvikborg",
-			"Torvaborg",
-			"Skjoldborg",
-			"Eidsvikborg",
-			"Halsborg",
-			"Gerborg",
-			"Gunnborg",
-			"Asenborg",
-			"Hammarborg",
-			"Skagaborg",
-			"Selasborg",
-			"Haellborg",
-			"Kampaborg",
-			"Gufarsborg",
-			"Husnarborg",
-			"Reistarborg",
-			"Geirborg"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -72,30 +40,12 @@
 			"sellsword_background",
 			"sellsword_background",
 			"squire_background",
-			"swordmaster_background",
 			"cripple_background",
 			"eunuch_background",
 			"hedge_knight_background",
 			"hedge_knight_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "A large citadel towering high over the surrounding tundra";
-		this.m.Description = "A large citadel towering high over the surrounding tundra and securing the large and open region. Many come here to resupply, make repairs and rest until venturing on.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_03.png";
-		this.m.Sprite = "world_stronghold_03";
-		this.m.Lighting = "world_stronghold_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsTundraSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = true;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 4;
-		this.m.AttachedLocationsMax = 5;
 	}
 
 	o.onBuild = function()

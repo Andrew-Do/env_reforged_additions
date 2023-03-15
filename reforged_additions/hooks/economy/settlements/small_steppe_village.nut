@@ -1,35 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_steppe_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Wohlen",
-			"Krauchthal",
-			"Brunnenthal",
-			"Erlach",
-			"Treiten",
-			"Tentlingen",
-			"Himmelsdorf",
-			"Thurn",
-			"Subingen",
-			"Thunstetten",
-			"Rothenbach",
-			"Sandheim",
-			"Sonstedt",
-			"Siegau",
-			"Strohdorf",
-			"Sonnheim",
-			"Sandfels",
-			"Sonnfels",
-			"Attendorn",
-			"Strauchdorf",
-			"Kargau",
-			"Sudheim",
-			"Krauchdorf",
-			"Dornen",
-			"Dornthal",
-			"Dornheim"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -45,23 +18,6 @@
 			"vagabond_background",
 			"poacher_background"
 		];
-		this.m.UIDescription = "A small village in the steppe living mainly off of modest trading";
-		this.m.Description = "A small village in the steppe living mainly off of modest trading.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_01";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_01.png";
-		this.m.Sprite = "world_townhall_01";
-		this.m.Lighting = "world_townhall_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsSteppeSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
 	}
 
 	o.onBuild = function()

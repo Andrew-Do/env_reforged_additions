@@ -1,6 +1,4 @@
-//TODO: log price mults and come up with more sane buy sell price formula
-//TODO: figure out why wages are getting fucked up
-//TODO: armor repair tools price is bugged
+//FEATURE_0: log price mults and come up with more sane buy sell price formula and figure out why wages are getting fucked up
 ::mods_hookExactClass("entity/world/settlement", function(o)
 {
     o.getPriceMult = function()

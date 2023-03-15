@@ -1,41 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_coast_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Seeturm",
-			"Sandwacht",
-			"Seewall",
-			"Kielwall",
-			"Strandwall",
-			"Otternwacht",
-			"Kampwacht",
-			"Stohlwall",
-			"Seeschanz",
-			"Wikwall",
-			"Sandturm",
-			"Krakenwacht",
-			"Strandwehr",
-			"Seewehr",
-			"Blankwehr",
-			"Krumwehr",
-			"Wallsande",
-			"Salzwacht",
-			"Sturmwall",
-			"Seewacht",
-			"Fernwall",
-			"Wesselburg",
-			"Dagewall",
-			"Windwacht",
-			"Weissenwacht",
-			"Fishburg",
-			"Stindwall",
-			"Tidenwall",
-			"Ebbenwacht",
-			"Prielburg",
-			"Sundwall",
-			"Sielburg"
-		]);
+		create();
 		this.m.DraftList = [
 			"fisherman_background",
 			"fisherman_background",
@@ -51,23 +18,6 @@
 			"raider_background",
 			"retired_soldier_background"
 		];
-		this.m.UIDescription = "A wooden motte with a bailey towering high over the nearby coastline";
-		this.m.Description = "A wooden motte with a bailey towering high over the nearby coastline.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_01";
-		this.m.UIBackgroundLeft = "ui/settlements/water_01";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_01.png";
-		this.m.Sprite = "world_stronghold_01";
-		this.m.Lighting = "world_stronghold_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsFishingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3 + 1;
 	}
 
 	o.onBuild = function()

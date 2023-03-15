@@ -207,7 +207,7 @@ this.cultist_sacrificial_ritual <- this.inherit("scripts/skills/skill", {
 }
 
 //Tables
-//TODO: adapt to reforged
+//FEATURE_8: adapt to reforged
 // ::Const.PerkInfo.SacrificialRitual.Rewards <- [
 // 	{
 // 		ID = "Davkul1stReward",

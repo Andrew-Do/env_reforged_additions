@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_snow_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tonderborg",
-			"Hornborg",
-			"Grimborg",
-			"Helleborg",
-			"Kalkborg",
-			"Lydersborg",
-			"Homsborg",
-			"Sommersborg",
-			"Brammingborg",
-			"Vardeborg",
-			"Norreborg",
-			"Birkeborg",
-			"Donnersborg",
-			"Tangborg",
-			"Helvikborg",
-			"Torvaborg",
-			"Skjoldborg",
-			"Eidsvikborg",
-			"Halsborg",
-			"Gerborg",
-			"Gunnborg",
-			"Asenborg",
-			"Hammarborg",
-			"Snekkborg",
-			"Groneborg",
-			"Ramborg",
-			"Vineborg",
-			"Hunneborg",
-			"Varborg",
-			"Kungsborg",
-			"Jarlsborg"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"brawler_background",
@@ -71,31 +39,9 @@
 			"sellsword_background",
 			"squire_background",
 			"cripple_background",
-			"paladin_background"
+			"paladin_background",
+			"beast_hunter_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		this.m.UIDescription = "This large citadel looks wide over the endless snow";
-		this.m.Description = "This large citadel looks wide over the endless snow and is a stronghold against anything that may come down from the far north. As people flocked to its protection over the years, the many houses and workshops in its vicinity now also grant shelter and supply to travelers, mercenaries and adventurers in the area.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03_snow";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left_snow";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right_snow";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_03.png";
-		this.m.Sprite = "world_stronghold_03";
-		this.m.Lighting = "world_stronghold_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsSnowSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = true;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 4;
-		this.m.AttachedLocationsMax = 5;
 	}
 
 	o.onBuild = function()

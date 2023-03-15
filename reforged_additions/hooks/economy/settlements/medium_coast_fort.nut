@@ -1,33 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_coast_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Seeburg",
-			"Kielburg",
-			"Otternburg",
-			"Blankenburg",
-			"Kampburg",
-			"Stohlburg",
-			"Wikburg",
-			"Krakenburg",
-			"Krumburg",
-			"Sandeburg",
-			"Meerburg",
-			"Aalburg",
-			"Dunenburg",
-			"Sturmburg",
-			"Weseburg",
-			"Gischtburg",
-			"Mowenburg",
-			"Beltburg",
-			"Sundburg",
-			"Salzburg",
-			"Blauburg",
-			"Sichelburg",
-			"Heringsburg",
-			"Schollburg"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"caravan_hand_background",
@@ -55,26 +30,8 @@
 			"raider_background",
 			"retired_soldier_background",
 			"sellsword_background",
-			"swordmaster_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "A stone keep that controls a strategically important port and protects nearby trading routes";
-		this.m.Description = "This stone keep controls a strategically important sea access and protects nearby trading routes.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
-		this.m.UIBackgroundLeft = "ui/settlements/water_01";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsFishingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4 + 1;
 	}
 
 	o.onBuild = function()

@@ -18,16 +18,6 @@
 		if (_id == "building.marketplace")
 		{
 			_list.push({
-				R = 60,
-				P = 1.0,
-				S = "accessory/wardog_item"
-			});
-			_list.push({
-				R = 60,
-				P = 1.0,
-				S = "accessory/armored_wardog_item"
-			});
-			_list.push({
 				R = 30,
 				P = 1.0,
 				S = "armor/leather_tunic"

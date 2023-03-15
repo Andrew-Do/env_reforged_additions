@@ -1,35 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_forest_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Holzburg",
-			"Tannburg",
-			"Waldburg",
-			"Hainburg",
-			"Dunkelburg",
-			"Finsterburg",
-			"Eichburg",
-			"Waidburg",
-			"Fahrnburg",
-			"Moosburg",
-			"Forstburg",
-			"Eulenburg",
-			"Fuchsburg",
-			"Dusterburg",
-			"Dornburg",
-			"Grunburg",
-			"Buchenburg",
-			"Haselburg",
-			"Breitenburg",
-			"Nesselburg",
-			"Wurzelburg",
-			"Bieberburg",
-			"Katzenburg",
-			"Wolfsburg",
-			"Natternburg",
-			"Findelsburg"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"bowyer_background",
@@ -52,31 +25,9 @@
 			"disowned_noble_background",
 			"disowned_noble_background",
 			"retired_soldier_background",
-			"squire_background"
+			"squire_background",
+			"beast_hunter_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		this.m.UIDescription = "A mighty stone keep surrounded by woods.";
-		this.m.Description = "This mighty stone keep surrounded by forest acts as a base of operations in the area.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsForestSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

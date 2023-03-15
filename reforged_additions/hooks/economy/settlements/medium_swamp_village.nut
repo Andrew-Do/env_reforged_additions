@@ -1,42 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_swamp_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Stakendorf",
-			"Schwartbuck",
-			"Monkamp",
-			"Sehlendorf",
-			"Schwarzpfuhl",
-			"Ehlerstorf",
-			"Torfbruck",
-			"Mohrdorf",
-			"Streekmoor",
-			"Kolkdorf",
-			"Schwarzwasser",
-			"Lauenbruck",
-			"Farnheim",
-			"Birkhain",
-			"Ahlen",
-			"Suderbusch",
-			"Altenfurth",
-			"Breitenbrunn",
-			"Grunbach",
-			"Grunwasser",
-			"Schmalfurth",
-			"Grossfurth",
-			"Grunkraut",
-			"Schattenfluth",
-			"Weissenbach",
-			"Kaltenbach",
-			"Tarsdorf",
-			"Tiefenbach",
-			"Julbach",
-			"Auengrund",
-			"Schwarzbrook",
-			"Brookdorf",
-			"Brookheim"
-		]);
+		create();
 		this.m.DraftList = [
 			"beggar_background",
 			"beggar_background",
@@ -63,32 +29,9 @@
 			"adventurous_noble_background",
 			"disowned_noble_background",
 			"cripple_background",
-			"anatomist_background"
+			"anatomist_background",
+			"beast_hunter_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		this.m.UIDescription = "A larger settlement surrounded by foul swamps";
-		this.m.Description = "A somewhat larger settlement spread out across various dry and firm spots in the swamp.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_02.png";
-		this.m.Sprite = "world_townhall_02";
-		this.m.Lighting = "world_townhall_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsSwampSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
-		this.m.ProduceString = "mushrooms";
 	}
 
 	o.onBuild = function()

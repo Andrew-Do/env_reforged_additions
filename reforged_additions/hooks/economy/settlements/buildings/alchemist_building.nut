@@ -121,6 +121,8 @@
 
 	o.onUpdateDraftList = function( _list )
 	{
+		//FEATURE_6: Add alchemist background
+		//FEATURE_6: Remove potion crafting from taxidermist
 	}
 
 });

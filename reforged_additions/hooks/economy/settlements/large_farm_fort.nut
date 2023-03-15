@@ -1,31 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_farm_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Haselfeste",
-			"Reiherfeste",
-			"Wehrfeste",
-			"Konigsfeste",
-			"Grafenschanze",
-			"Weissenfeste",
-			"Koppelfeste",
-			"Weidefeste",
-			"Auenfeste",
-			"Gardefeste",
-			"Kroonsfeste",
-			"Grunfeste",
-			"Hoberfeste",
-			"Grunlandfeste",
-			"Freilandfeste",
-			"Lowenschanze",
-			"Weidenfeste",
-			"Feldfeste",
-			"Aulenfeste",
-			"Gerstenfeste",
-			"Brunnenfeste",
-			"Tauschanze"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"gambler_background",
@@ -57,27 +34,9 @@
 			"sellsword_background",
 			"squire_background",
 			"squire_background",
-			"swordmaster_background",
 			"cripple_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "A massive citadel towering over the open plains";
-		this.m.Description = "A massive citadel towering over the open plains surrounding it. A seat of power to nobles, and housing large armed forces for a firm grip on the region.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_03.png";
-		this.m.Sprite = "world_stronghold_03";
-		this.m.Lighting = "world_stronghold_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsFarmingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 5;
-		this.m.AttachedLocationsMax = 5;
 	}
 
 	o.onBuild = function()

@@ -1,39 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_forest_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Holzwacht",
-			"Tannwall",
-			"Waldwacht",
-			"Hainturm",
-			"Dunkelwacht",
-			"Eichwacht",
-			"Waidschanze",
-			"Fahrnwacht",
-			"Mooswehr",
-			"Forstwehr",
-			"Eulenwacht",
-			"Fuchsturm",
-			"Finsterwall",
-			"Dusterschanze",
-			"Finsterwehr",
-			"Dornwall",
-			"Farnwacht",
-			"Grunwall",
-			"Eulenturm",
-			"Wildwacht",
-			"Steinforst",
-			"Haselwacht",
-			"Nebelwacht",
-			"Hirschturm",
-			"Schwarzwacht",
-			"Steinweiler",
-			"Erlenwall",
-			"Eibenwacht",
-			"Haselwehr",
-			"Waldenwehr"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"bowyer_background",
@@ -51,29 +20,6 @@
 			"retired_soldier_background",
 			"retired_soldier_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		this.m.UIDescription = "A military strongpoint surrounded by woods";
-		this.m.Description = "Surrounded by forest, this small wooden keep controls the surrounding woodlands.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_01";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_01.png";
-		this.m.Sprite = "world_stronghold_01";
-		this.m.Lighting = "world_stronghold_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsForestSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
 	}
 
 	o.onBuild = function()

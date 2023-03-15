@@ -1,43 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_mining_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Goldhoft",
-			"Ellenberg",
-			"Kahlenberg",
-			"Bokenberg",
-			"Gronenberg",
-			"Eisenstein",
-			"Fuchsberg",
-			"Reinberg",
-			"Kaltenhof",
-			"Jaderberg",
-			"Steinhausen",
-			"Eichenberg",
-			"Thal",
-			"Wolfhaiden",
-			"Trogen",
-			"Sattel",
-			"Koppingen",
-			"Schweikhof",
-			"Hochdorf",
-			"Bergau",
-			"Nasenfels",
-			"Adlerstein",
-			"Felsheim",
-			"Mitterfels",
-			"Hohenau",
-			"Pfeilstein",
-			"Schneeberg",
-			"Weissenfels",
-			"Senftenberg",
-			"Eisengrab",
-			"Weitblick",
-			"Erdfall",
-			"Helfenstein",
-			"Hammererden"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -54,35 +19,6 @@
 			"thief_background",
 			"poacher_background"
 		];
-		this.m.UIDescription = "Some huts and small buildings housing workers for the nearby mines";
-		this.m.Description = "Some huts and small buildings housing workers for the nearby mines.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_01";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_01.png";
-		this.m.Sprite = "world_townhall_01";
-		this.m.Lighting = "world_townhall_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsMiningSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
-		this.m.ProduceString = "ore";
-		this.addBuilding(this.new("scripts/entity/world/settlements/buildings/crowd_building"), 5);
-		this.addBuilding(this.new("scripts/entity/world/settlements/buildings/marketplace_building"), 2);
-
-		if (this.Math.rand(1, 100) <= 70)
-		{
-			this.addBuilding(this.new("scripts/entity/world/settlements/buildings/armorsmith_building"));
-		}
-		else if (this.Math.rand(1, 100) <= 70)
-		{
-			this.addBuilding(this.new("scripts/entity/world/settlements/buildings/weaponsmith_building"));
-		}
 	}
 
 	o.onBuild = function()

@@ -1,35 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_tundra_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tondersted",
-			"Jarlsted",
-			"Lydersted",
-			"Bolasted",
-			"Ravested",
-			"Hellested",
-			"Hornsted",
-			"Hejsted",
-			"Sommersted",
-			"Brammingsted",
-			"Vardested",
-			"Norrested",
-			"Grimsted",
-			"Ognasted",
-			"Eidsted",
-			"Gersted",
-			"Asested",
-			"Gunnsted",
-			"Hammarsted",
-			"Einarsted",
-			"Skallested",
-			"Halfdansted",
-			"Ratarsted",
-			"Lugnisted",
-			"Leifsted",
-			"Lorrested"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -63,26 +36,8 @@
 			"disowned_noble_background",
 			"raider_background",
 			"sellsword_background",
-			"swordmaster_background",
 			"anatomist_background"
 		];
-		this.m.UIDescription = "A large city and trading hub surrounded by barren tundra";
-		this.m.Description = "Surrounded by barren tundra, this large city has lasted as an important trading hub and home to thinkers and fine arts.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/townhall_03.png";
-		this.m.Sprite = "world_townhall_03";
-		this.m.Lighting = "world_townhall_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsTundraSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = false;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 5;
-		this.m.AttachedLocationsMax = 6;
 	}
 
 	o.onBuild = function()

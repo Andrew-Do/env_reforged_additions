@@ -1,42 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_fishing_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Seedorf",
-			"Kielseng",
-			"Meierwik",
-			"Sanddorf",
-			"Sandwik",
-			"Holnis",
-			"Holmwik",
-			"Niewik",
-			"Hattlund",
-			"Stohl",
-			"Strande",
-			"Sandkamp",
-			"Sandberg",
-			"Birkenstrand",
-			"Sundheim",
-			"Seekamp",
-			"Krakendorf",
-			"Blankwasser",
-			"Harkensee",
-			"Otterndorf",
-			"Seefeld",
-			"Horum",
-			"Krumhorn",
-			"Gothmund",
-			"Angeln",
-			"Sandholm",
-			"Jadensee",
-			"Egernsande",
-			"Nebelheim",
-			"Sudersande",
-			"Grossenkoog",
-			"Aalbek",
-			"Seedeich"
-		]);
+		create();
 		this.m.DraftList = [
 			"beggar_background",
 			"beggar_background",
@@ -52,24 +18,6 @@
 			"vagabond_background",
 			"vagabond_background"
 		];
-		this.m.UIDescription = "A small fishing village made up of a few humble huts";
-		this.m.Description = "A small fishing village made up of a few humble huts.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_01";
-		this.m.UIBackgroundLeft = "ui/settlements/water_01";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_01.png";
-		this.m.Sprite = "world_townhall_01";
-		this.m.Lighting = "world_townhall_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsFishingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3 + 1;
-		this.m.ProduceString = "fish";
 	}
 
 	o.onBuild = function()

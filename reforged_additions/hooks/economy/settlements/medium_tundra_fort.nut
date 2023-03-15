@@ -1,43 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_tundra_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tonderhovel",
-			"Horngard",
-			"Grimhaug",
-			"Hellehovel",
-			"Kalkhovel",
-			"Lydersgard",
-			"Homsgard",
-			"Sommersholm",
-			"Brammingholm",
-			"Vardegard",
-			"Norreholm",
-			"Birkehovel",
-			"Donnersgard",
-			"Tanghaug",
-			"Helvikholm",
-			"Torvaholm",
-			"Skjoldgard",
-			"Eidsvikholm",
-			"Halshovel",
-			"Gerholm",
-			"Gunnholm",
-			"Asengard",
-			"Hammargard",
-			"Vikeholm",
-			"Skandergard",
-			"Skallegard",
-			"Varehaug",
-			"Gufirsgard",
-			"Hafnarsholm",
-			"Ragnhaug",
-			"Torgeirsholm",
-			"Heersgard",
-			"Holmhaug",
-			"Lundirsholm"
-		]);
+		create();
 		this.m.DraftList = [
 			"bowyer_background",
 			"brawler_background",
@@ -61,23 +26,6 @@
 			"sellsword_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "A stone keep securing the surrounding tundra";
-		this.m.Description = "A stone keep that is the seat of power in the surrounding tundra. It acts as a base of operations for a decently sized garrison.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsTundraSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

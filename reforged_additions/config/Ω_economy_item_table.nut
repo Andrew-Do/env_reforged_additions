@@ -1,12 +1,10 @@
 //FEATURE_1: generate location loot hooks
 
-//TODO: add new reforged weapon to pricelist
-
 //FEATURE_1: this.World.Assets.addMoney
 	//overhaul contract pay
 	//event pay/prices
 
-//FEATURE_2: overhaul enemy equipment/builds
+//FEATURE_8: overhaul enemy equipment/builds
 
 
 // 4 gallons of ale: 1 Pence
@@ -58,7 +56,6 @@
 	"supplies.medicine" : 60,
 
 	//Tools
-	//TODO: Tool prices
 	"ammo.arrows" : 35,
 	"ammo.bolts" : 35,
 	"ammo.powder" : 50,
@@ -69,13 +66,13 @@
 	"weapon.player_banner" : 137,
 
 	//Accessories
-	"accessory.cursed_crystal_skull" : 250, //FEATURE_6: Artifact rework + unlock event, must be equipped
-	"accessory.wardog" : 12,
-	"accessory.armored_wardog" : 48, //TODO: Remove
-	"accessory.armored_warhound" : 72, //TODO: Remove
-	"accessory.heavily_armored_wardog" : 78, //TODO: Remove
-	"accessory.heavily_armored_warhound" : 108, //TODO: Remove
-	"accessory.warwolf" : 200, //TODO: Remove
+	"accessory.cursed_crystal_skull" : 250, //FEATURE_9: Artifact rework + unlock event, must be equipped
+	"accessory.wardog" : 0,
+	"accessory.armored_wardog" : 0,
+	"accessory.armored_warhound" : 0,
+	"accessory.heavily_armored_wardog" : 0, 
+	"accessory.heavily_armored_warhound" : 0, 
+	"accessory.warwolf" : 0,
 	//FEATURE_6: Create tamed direwolf item
 	//if released by non-wolf master bro, 75% chance that it will be wild and attack allies
 
@@ -97,7 +94,7 @@
 	//Alchemy
 	"accessory.berserker_mushrooms" : 100,
 	"accessory.bandage" : 25,
-	//FEATURE_1: alchemy item rework & alchemy tree
+	//FEATURE_8: alchemy item rework & alchemy tree
 	"weapon.acid_flask" : 400,
 	"weapon.smoke_bomb" : 400,
 	"weapon.daze_bomb" : 500,
@@ -135,8 +132,13 @@
 	"misc.paint_white_blue" : 20,
 	"misc.paint_white_green_yellow" : 20,
 	//Trade Goods
-	"misc.wardog_armor_upgrade" : 200, //FEATURE_6: wardog -> warwolf? Northern kingdom
-	"misc.wardog_heavy_armor_upgrade" : 400, //FEATURE_6: wardog -> warwolf? Northern kingdom
+	"misc.wardog_armor_upgrade" : 200, //FEATURE_7: wardog -> warwolf? Northern kingdom
+	"misc.wardog_heavy_armor_upgrade" : 400, //FEATURE_7: wardog -> warwolf? Northern kingdom
+	//FEATURE_7: confront_warlord_contract, wardogs
+	//FEATURE_7: defend_holy_site_contract, wardogs
+	//FEATURE_7: greenskins_investigation_event, wardogs
+	//FEATURE_7: greenskins_investigation_event, wardogs
+	//FEATURE_7: Remove wardog armor crafting
 	"misc.peat_bricks" : 100,
 	"misc.cloth_rolls" : 140,
 	"misc.copper_ingots" : 220,
@@ -273,7 +275,9 @@
 	
 	
 	//Weapons
+	//FIXME: Remake environment with new reforged and patch
 	//TODO: Weapon prices
+	//TODO: add new reforged weapon to pricelist
 	"weapon.barbarian_drum" : 0,
 	"weapon.knife" : 0,
 	"weapon.wooden_stick" : 0,

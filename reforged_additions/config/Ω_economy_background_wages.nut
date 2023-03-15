@@ -246,7 +246,7 @@
 		"HiringCost" : 24,
 		"DailyCost" : 12
 	},
-	//FEATURE_4: remove swordmasters from recruitment
+	//FEATURE_8: Swordmaster, come up with new mode of recruitment
 	"background.swordmaster" : {
 		"HiringCost" : 48,
 		"DailyCost" : 24

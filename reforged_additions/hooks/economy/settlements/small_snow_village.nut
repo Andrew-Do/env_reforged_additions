@@ -1,46 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_snow_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tonder",
-			"Lydersholm",
-			"Kravlund",
-			"Bola",
-			"Ravestad",
-			"Alsliv",
-			"Hellevad",
-			"Heimstad",
-			"Hornheim",
-			"Jerstal",
-			"Hejsager",
-			"Kalk",
-			"Sommerstad",
-			"Horn",
-			"Bramming",
-			"Varde",
-			"Norre",
-			"Vistadt",
-			"Olbing",
-			"Grimstad",
-			"Birkeland",
-			"Donnerstad",
-			"Tangvall",
-			"Helvik",
-			"Ogna",
-			"Norheim",
-			"Undheim",
-			"Torvastad",
-			"Skjold",
-			"Eidsvik",
-			"Halheim",
-			"Gerheim",
-			"Asenstad",
-			"Gunnheim",
-			"Hammar",
-			"Bullarsby",
-			"Lonneberg"
-		]);
+		create();
 		this.m.DraftList = [
 			"beggar_background",
 			"brawler_background",
@@ -57,23 +19,6 @@
 			"wildman_background",
 			"wildman_background"
 		];
-		this.m.UIDescription = "Some huts huddled together";
-		this.m.Description = "A small group of huts huddled together, defying the harsh snowy winds of the north.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_01_snow";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_01.png";
-		this.m.Sprite = "world_townhall_01";
-		this.m.Lighting = "world_townhall_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsSnowSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = false;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
 	}
 
 	o.onBuild = function()

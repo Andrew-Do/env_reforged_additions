@@ -1,42 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_swamp_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Schwarzburg",
-			"Moosburg",
-			"Pfuhlburg",
-			"Moorburg",
-			"Furthburg",
-			"Stakenburg",
-			"Kolkburg",
-			"Torfburg",
-			"Krautburg",
-			"Birkenburg",
-			"Brunnburg",
-			"Kaltenburg",
-			"Grunburg",
-			"Suhlburg",
-			"Brookburg",
-			"Muckenburg",
-			"Egelburg",
-			"Dunkelburg",
-			"Nebelburg",
-			"Bruchburg",
-			"Morastburg",
-			"Froschburg",
-			"Schlammburg",
-			"Brackenburg",
-			"Molchburg",
-			"Teichburg",
-			"Fennburg",
-			"Riedburg",
-			"Schlickburg",
-			"Senkburg",
-			"Rohrburg",
-			"Marschburg",
-			"Schilfburg"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -60,23 +26,6 @@
 			"raider_background",
 			"retired_soldier_background"
 		];
-		this.m.UIDescription = "A stone keep controlling routes through the swamps";
-		this.m.Description = "A stone keep controlling routes through and access to the surrounding swamps and marshes.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsSwampSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

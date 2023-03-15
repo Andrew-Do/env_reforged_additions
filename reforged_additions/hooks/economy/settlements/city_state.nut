@@ -42,13 +42,9 @@
 			"nomad_background",
 			"nomad_background",
 			"nomad_ranged_background",
-			"assassin_southern_background"
+			"assassin_southern_background",
+			"beast_hunter_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
 	}
 
 	o.onBuild = function()	{

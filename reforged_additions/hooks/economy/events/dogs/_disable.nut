@@ -1,6 +1,5 @@
 //disable dog events
-//FEATURE_1: remove dogs from shops
-//FEATURE_1: remove dogs from troops
+//FEATURE_7: remove dogs from troops
 ::mods_hookExactClass("events/events/adopt_wardog_event", function (o)
 {
     o.onUpdateScore = function() { return; }

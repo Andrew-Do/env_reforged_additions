@@ -1,4 +1,4 @@
-//FEATURE_2: add gruesome feast ai to nonplayers
+//FEATURE_8: add gruesome feast ai to nonplayers
 this.potion_gruesome_feast <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()

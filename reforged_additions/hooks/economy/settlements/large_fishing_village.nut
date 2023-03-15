@@ -1,28 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_fishing_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Seestadt",
-			"Wikstadt",
-			"Konigshaven",
-			"Grafenhaven",
-			"Holnisland",
-			"Nieweland",
-			"Kampstadt",
-			"Krakenland",
-			"Blankenstadt",
-			"Harkenstadt",
-			"Tiefenstadt",
-			"Weissenstadt",
-			"Kobmanhaven",
-			"Grotenhaven",
-			"Konigswasser",
-			"Konigsmunde",
-			"Kronenkoog",
-			"Steinkai",
-			"Deichstadt"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -67,27 +47,8 @@
 			"raider_background",
 			"retired_soldier_background",
 			"sellsword_background",
-			"swordmaster_background",
 			"anatomist_background"
 		];
-		this.m.UIDescription = "A large coastal city and trading hub";
-		this.m.Description = "A big harbor city relying on trade and fishing, and an important hub for travellers arriving or leaving by ship.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";
-		this.m.UIBackgroundLeft = "ui/settlements/water_01";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/townhall_03.png";
-		this.m.Sprite = "world_townhall_03";
-		this.m.Lighting = "world_townhall_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsFishingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 5;
-		this.m.AttachedLocationsMax = 6 + 2;
-		this.m.ProduceString = "fish";
 	}
 
 	o.onBuild = function()

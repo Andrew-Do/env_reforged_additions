@@ -35,7 +35,6 @@
 			"retired_soldier_background",
 			"sellsword_background",
 			"squire_background",
-			"swordmaster_background",
 			"cripple_background",
 			"eunuch_background",
 			"paladin_background"

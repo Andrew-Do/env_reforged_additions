@@ -1,34 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_mountains_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Wallstein",
-			"Hohenwacht",
-			"Steinberg",
-			"Wolfswall",
-			"Felswall",
-			"Steinwacht",
-			"Eisenwall",
-			"Jaderwall",
-			"Hohenschanze",
-			"Wallheim",
-			"Gronenwall",
-			"Thalwacht",
-			"Schanzberg",
-			"Windwacht",
-			"Turmwacht",
-			"Felswacht",
-			"Hohenturm",
-			"Adlerwacht",
-			"Scharfenstein",
-			"Oberwallheim",
-			"Hochwall",
-			"Bergwall",
-			"Finkenwacht",
-			"Greifenwall",
-			"Himmelswacht"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -46,22 +20,6 @@
 			"retired_soldier_background",
 			"retired_soldier_background"
 		];
-		this.m.UIDescription = "A small fortification built in the mountains";
-		this.m.Description = "A small fortification has been built in this mountainous region to act as a base of operations and control the surrounding lands.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_01";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_01.png";
-		this.m.Sprite = "world_stronghold_01";
-		this.m.Lighting = "world_stronghold_01_light";
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
 	}
 
 	o.onBuild = function()

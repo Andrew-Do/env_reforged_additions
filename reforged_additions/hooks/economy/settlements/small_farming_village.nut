@@ -1,49 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_farming_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Weidefeld",
-			"Hemmeln",
-			"Saxdorf",
-			"Kochendorf",
-			"Altenhof",
-			"Weidenau",
-			"Schnellen",
-			"Neudorf",
-			"Freidorf",
-			"Weissenhaus",
-			"Muhlenheim",
-			"Grunfelde",
-			"Ivendorf",
-			"Grafenheide",
-			"Hermannshof",
-			"Koppeldorf",
-			"Meiding",
-			"Varel",
-			"Durbach",
-			"Dreifelden",
-			"Bockhorn",
-			"Hufschlag",
-			"Hage",
-			"Wagenheim",
-			"Harlingen",
-			"Wiese",
-			"Wiesendorf",
-			"Markdorf",
-			"Heuweiler",
-			"Bitterfeld",
-			"Neuenried",
-			"Auenbach",
-			"Adelshofen",
-			"Allersdorf",
-			"Brunnendorf",
-			"Ochsenhausen",
-			"Weingarten",
-			"Konigsfeld",
-			"Rosenhof",
-			"Weidenbach"
-		]);
+		create();
 		this.m.DraftList = [
 			"beggar_background",
 			"daytaler_background",
@@ -59,23 +18,6 @@
 			"vagabond_background",
 			"poacher_background"
 		];
-		this.m.UIDescription = "A small farming village living mostly off of the surrounding fertile lands";
-		this.m.Description = "A small farming village living mostly off of the surrounding fertile lands.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_01";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_01.png";
-		this.m.Sprite = "world_townhall_01";
-		this.m.Lighting = "world_townhall_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsFarmingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
 	}
 
 	o.onBuild = function()

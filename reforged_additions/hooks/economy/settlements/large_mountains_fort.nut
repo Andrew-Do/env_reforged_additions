@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_mountains_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Hohenfeste",
-			"Wolfenfeste",
-			"Wolfenstein",
-			"Felsfeste",
-			"Eisenfeste",
-			"Grollfeste",
-			"Grubenfeste",
-			"Donnerfeste",
-			"Erzfeste",
-			"Gronenfeste",
-			"Sattelfeste",
-			"Kammfeste",
-			"Turmfeste",
-			"Windfeste",
-			"Adlerfeste",
-			"Brunwald",
-			"Heldenfeste",
-			"Wurmfeste",
-			"Schwertfeste",
-			"Lanzenfeste",
-			"Falkenstein",
-			"Flechtenstein",
-			"Himmelsfeste",
-			"Steinturm",
-			"Gipfelfeste",
-			"Zugfeste",
-			"Granitfeste",
-			"Zinnenfeste",
-			"Wackersfeste",
-			"Fernsichtfeste",
-			"Wildbergfeste"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"apprentice_background",
@@ -69,29 +37,11 @@
 			"sellsword_background",
 			"squire_background",
 			"squire_background",
-			"swordmaster_background",
 			"cripple_background",
 			"hedge_knight_background",
 			"hedge_knight_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "A massive stone citadel built into the steep mountains";
-		this.m.Description = "This massive stone citadel is built into the steep mountains. A large number of men are stationed here to hold a firm grip on the land.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_03.png";
-		this.m.Sprite = "world_stronghold_03";
-		this.m.Lighting = "world_stronghold_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsMiningSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 4;
-		this.m.AttachedLocationsMax = 5;
 	}
 
 	o.onBuild = function()

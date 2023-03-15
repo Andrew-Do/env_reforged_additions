@@ -1,39 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_mining_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Hochgrube",
-			"Erzgrube",
-			"Schachtheim",
-			"Erzheim",
-			"Schmelzheim",
-			"Eisenstein",
-			"Erzfels",
-			"Gemmenschacht",
-			"Salzbruch",
-			"Salzfels",
-			"Erzbruch",
-			"Hohenbruch",
-			"Eisenheim",
-			"Grubenheim",
-			"Eisenberg",
-			"Erzberg",
-			"Havelberg",
-			"Goldbruch",
-			"Wolkenstein",
-			"Goldstein",
-			"Gemmenstein",
-			"Grafenschacht",
-			"Kahlengrube",
-			"Trogenschacht",
-			"Adlerstollen",
-			"Reinbruch",
-			"Hammererden",
-			"Schneefels",
-			"Weissenschacht",
-			"Ellengrube"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"apprentice_background",
@@ -57,24 +26,6 @@
 			"thief_background",
 			"vagabond_background"
 		];
-		this.m.UIDescription = "A stretched out settlement nestled into the surrounding mountains";
-		this.m.Description = "A stretched out settlement nestled into the surrounding mountains. The hammering of pickaxes against stone can be heard from a distance.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_02.png";
-		this.m.Sprite = "world_townhall_02";
-		this.m.Lighting = "world_townhall_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsMiningSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
-		this.m.ProduceString = "ore";
 	}
 
 	o.onBuild = function()

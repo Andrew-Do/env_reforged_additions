@@ -1,37 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_farm_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Gardendorf",
-			"Walldorf",
-			"Hageturm",
-			"Wiesenwacht",
-			"Markwall",
-			"Hornwall",
-			"Hemmelswacht",
-			"Weissenwacht",
-			"Grafenturm",
-			"Grafenwacht",
-			"Wagenwall",
-			"Herrmanswacht",
-			"Wallheim",
-			"Schanzdorf",
-			"Koppelwacht",
-			"Grafenschanze",
-			"Hammerturm",
-			"Speerheim",
-			"Grunwacht",
-			"Schonwall",
-			"Auwall",
-			"Graswacht",
-			"Hainwall",
-			"Krugwall",
-			"Grafenburg",
-			"Furstenwall",
-			"Thalwacht",
-			"Weiherwacht"
-		]);
+		create();
 		this.m.DraftList = [
 			"farmhand_background",
 			"farmhand_background",
@@ -47,23 +18,6 @@
 			"retired_soldier_background",
 			"retired_soldier_background"
 		];
-		this.m.UIDescription = "A wooden motte with a bailey overlooking the surrounding fields";
-		this.m.Description = "A wooden motte with a bailey overlooking the surrounding fields.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_01";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_01.png";
-		this.m.Sprite = "world_stronghold_01";
-		this.m.Lighting = "world_stronghold_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsFarmingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
 	}
 
 	o.onBuild = function()

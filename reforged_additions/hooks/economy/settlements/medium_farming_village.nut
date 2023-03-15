@@ -1,39 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_farming_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Weidefeld",
-			"Hemmeln",
-			"Saxdorf",
-			"Kochendorf",
-			"Altenhof",
-			"Schnellen",
-			"Neudorf",
-			"Freidorf",
-			"Durbach",
-			"Weissenhaus",
-			"Muhlenheim",
-			"Grunfelde",
-			"Ivendorf",
-			"Weidenau",
-			"Grafenheide",
-			"Hermannshof",
-			"Koppeldorf",
-			"Meiding",
-			"Varel",
-			"Dreifelden",
-			"Bockhorn",
-			"Hufschlag",
-			"Hage",
-			"Wagenheim",
-			"Harlingen",
-			"Wiese",
-			"Wiesendorf",
-			"Markdorf",
-			"Heuweiler",
-			"Bitterfeld"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -58,23 +27,6 @@
 			"vagabond_background",
 			"retired_soldier_background"
 		];
-		this.m.UIDescription = "A prospering village surrounded by fertile land";
-		this.m.Description = "A prospering village surrounded by fertile land. The market is usually filled with all kinds of fresh food.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_02.png";
-		this.m.Sprite = "world_townhall_02";
-		this.m.Lighting = "world_townhall_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsFarmingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

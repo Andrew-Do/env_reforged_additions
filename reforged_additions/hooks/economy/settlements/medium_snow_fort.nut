@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_snow_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tonderhovel",
-			"Horngard",
-			"Grimhaug",
-			"Hellehovel",
-			"Kalkhovel",
-			"Lydersgard",
-			"Homsgard",
-			"Sommersholm",
-			"Brammingholm",
-			"Vardegard",
-			"Norreholm",
-			"Birkehovel",
-			"Donnersgard",
-			"Tanghaug",
-			"Helvikholm",
-			"Torvaholm",
-			"Skjoldgard",
-			"Eidsvikholm",
-			"Halshovel",
-			"Gerholm",
-			"Gunnholm",
-			"Asengard",
-			"Hammargard",
-			"Vikeholm",
-			"Skandergard",
-			"Gunhall",
-			"Asaholm",
-			"Grimmarsholm",
-			"Hjalsgard",
-			"Kungenshovel",
-			"Wallhovel"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"brawler_background",
@@ -61,23 +29,6 @@
 			"raider_background",
 			"retired_soldier_background"
 		];
-		this.m.UIDescription = "This stone keep shelters a garrison from the snow";
-		this.m.Description = "This stone-built keep offers protection both from the cold and any invaders.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02_snow";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left_snow";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right_snow";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsSnowSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

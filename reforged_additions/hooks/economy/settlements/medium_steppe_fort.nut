@@ -1,35 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_steppe_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Wohlenburg",
-			"Krauchburg",
-			"Erlachburg",
-			"Treitenburg",
-			"Thunburg",
-			"Rothburg",
-			"Sonnenburg",
-			"Siegburg",
-			"Sudburg",
-			"Strauchburg",
-			"Maderburg",
-			"Kargburg",
-			"Dornburg",
-			"Gelbburg",
-			"Suderburg",
-			"Lichtburg",
-			"Hellenburg",
-			"Glanzburg",
-			"Strahlenburg",
-			"Trockenburg",
-			"Schattenburg",
-			"Schimmerburg",
-			"Splitterburg",
-			"Staubburg",
-			"Lehmburg",
-			"Wustenburg"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -55,23 +28,6 @@
 			"retired_soldier_background",
 			"sellsword_background"
 		];
-		this.m.UIDescription = "A stone keep projecting power over the flat steppe";
-		this.m.Description = "This stone keep is a strongpoint in the area and grants a good view of the surrounding flat and dry lands.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsSteppeSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

@@ -1,42 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_swamp_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Stakendorf",
-			"Schwartbuck",
-			"Monkamp",
-			"Sehlendorf",
-			"Schwarzpfuhl",
-			"Ehlerstorf",
-			"Torfbruck",
-			"Mohrdorf",
-			"Streekmoor",
-			"Kolkdorf",
-			"Schwarzwasser",
-			"Lauenbruck",
-			"Farnheim",
-			"Birkhain",
-			"Ahlen",
-			"Suderbusch",
-			"Altenfurth",
-			"Breitenbrunn",
-			"Grunbach",
-			"Grunwasser",
-			"Schmalfurth",
-			"Grossfurth",
-			"Grunkraut",
-			"Schattenfluth",
-			"Weissenbach",
-			"Kaltenbach",
-			"Tarsdorf",
-			"Tiefenbach",
-			"Julbach",
-			"Auengrund",
-			"Schwarzbrook",
-			"Brookdorf",
-			"Brookheim"
-		]);
+		create();
 		this.m.DraftList = [
 			"beggar_background",
 			"cultist_background",
@@ -51,32 +17,9 @@
 			"vagabond_background",
 			"wildman_background",
 			"wildman_background",
-			"witchhunter_background"
+			"witchhunter_background",
+			"beast_hunter_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		this.m.UIDescription = "A small and crude settlement in a swampy area";
-		this.m.Description = "A small settlement in a swampy area. The people living here sure know hardship.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_01";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_01.png";
-		this.m.Sprite = "world_townhall_01";
-		this.m.Lighting = "world_townhall_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsSwampSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
-		this.m.ProduceString = "mushrooms";
 	}
 
 	o.onBuild = function()

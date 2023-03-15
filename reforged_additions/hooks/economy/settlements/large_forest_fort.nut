@@ -1,37 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_forest_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Waldfeste",
-			"Tannenfeste",
-			"Schlangenfeste",
-			"Hainfeste",
-			"Dunkelfeste",
-			"Finsterfeste",
-			"Eichfeste",
-			"Eibenfeste",
-			"Waidfeste",
-			"Eulenfeste",
-			"Eberfeste",
-			"Fahrnfeste",
-			"Moosfeste",
-			"Forstfeste",
-			"Dusterfeste",
-			"Dornfeste",
-			"Grunfeste",
-			"Falkenfeste",
-			"Salamanderfeste",
-			"Lerchenfeste",
-			"Laubfeste",
-			"Erlenfeste",
-			"Nadelfeste",
-			"Waldachfeste",
-			"Hornfeste",
-			"Klarbachfeste",
-			"Eisbachfeste",
-			"Fichtenwall"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -66,34 +37,11 @@
 			"sellsword_background",
 			"squire_background",
 			"squire_background",
-			"swordmaster_background",
 			"cripple_background",
-			"paladin_background"
+			"paladin_background",
+			"beast_hunter_background",
+			"beast_hunter_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		this.m.UIDescription = "A citadel towering high over the surrounding woods";
-		this.m.Description = "This citadel towers high over the surrounding forests and dominates the region.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_03.png";
-		this.m.Sprite = "world_stronghold_03";
-		this.m.Lighting = "world_stronghold_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsForestSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 4;
-		this.m.AttachedLocationsMax = 5;
 	}
 
 	o.onBuild = function()

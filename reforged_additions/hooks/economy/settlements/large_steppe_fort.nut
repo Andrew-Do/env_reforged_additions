@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_steppe_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Wohlenfeste",
-			"Krauchfeste",
-			"Erlachfeste",
-			"Treitenfeste",
-			"Thunfeste",
-			"Rothenfeste",
-			"Sonnenfeste",
-			"Siegfeste",
-			"Sudfeste",
-			"Suderfeste",
-			"Strauchfeste",
-			"Maderfeste",
-			"Kargfeste",
-			"Dornenfeste",
-			"Gelbfeste",
-			"Lichtfeste",
-			"Hellenfeste",
-			"Glanzfeste",
-			"Strahlfeste",
-			"Konigsfeste",
-			"Knochenfeste",
-			"Durrfeste",
-			"Sandsturmfeste",
-			"Gelbfelsfeste",
-			"Rothsteinfeste",
-			"Goldfeste",
-			"Scharfzahnfeste",
-			"Brandfeste",
-			"Staubfeste",
-			"Odfeste",
-			"Habichtfeste"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -73,33 +41,10 @@
 			"sellsword_background",
 			"sellsword_background",
 			"sellsword_background",
-			"swordmaster_background",
 			"hedge_knight_background",
-			"paladin_background"
+			"paladin_background",
+			"eunuch_southern_background"
 		];
-
-		if (this.Const.DLC.Desert)
-		{
-			this.m.DraftList.push("eunuch_southern_background");
-		}
-
-		this.m.UIDescription = "A mighty citadel towering above the surrounding steppe";
-		this.m.Description = "This mighty citadel towers high above the surrounding steppe and is the seat of power in the region. It houses a large garrison and offers all kinds of services valuable to travellers and mercenaries.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_03.png";
-		this.m.Sprite = "world_stronghold_03";
-		this.m.Lighting = "world_stronghold_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsSteppeSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 4;
-		this.m.AttachedLocationsMax = 5;
 	}
 
 	o.onBuild = function()

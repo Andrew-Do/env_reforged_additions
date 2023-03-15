@@ -1,36 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_mountains_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Hohenburg",
-			"Wolfenburg",
-			"Felsburg",
-			"Eisenburg",
-			"Jadeburg",
-			"Gronenburg",
-			"Thalburg",
-			"Sattelburg",
-			"Windburg",
-			"Turmburg",
-			"Adlerburg",
-			"Scharfenburg",
-			"Wolfenstein",
-			"Brunwald",
-			"Heldenburg",
-			"Wurmburg",
-			"Schwertburg",
-			"Lanzenburg",
-			"Himmelsburg",
-			"Granitschanze",
-			"Erzburg",
-			"Wolkenburg",
-			"Hochburg",
-			"Windfall",
-			"Gemmenburg",
-			"Hohenstein",
-			"Oberburg"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"apprentice_background",
@@ -56,23 +28,6 @@
 			"sellsword_background",
 			"sellsword_background"
 		];
-		this.m.UIDescription = "A stone keep that is towering high over the surrounding mountains";
-		this.m.Description = "A stone keep that is towering high over the surrounding mountains. Lookouts on the towers can see approaching troops from miles away.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsMiningSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

@@ -1,44 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_snow_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tonder",
-			"Lydersholm",
-			"Kravlund",
-			"Bola",
-			"Ravestad",
-			"Alsliv",
-			"Hellevad",
-			"Heimstad",
-			"Hornheim",
-			"Jerstal",
-			"Hejsager",
-			"Kalk",
-			"Sommerstad",
-			"Horn",
-			"Bramming",
-			"Varde",
-			"Norre",
-			"Vistadt",
-			"Olbing",
-			"Grimstad",
-			"Birkeland",
-			"Donnerstad",
-			"Tangvall",
-			"Helvik",
-			"Ogna",
-			"Norheim",
-			"Undheim",
-			"Torvastad",
-			"Skjold",
-			"Eidsvik",
-			"Halheim",
-			"Gerheim",
-			"Asenstad",
-			"Gunnheim",
-			"Hammar"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"brawler_background",
@@ -65,23 +29,6 @@
 			"disowned_noble_background",
 			"cripple_background"
 		];
-		this.m.UIDescription = "A medium sized village covered in snow throughout most of the year";
-		this.m.Description = "A medium sized village covered in snow throughout most of the year.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_02_snow";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left_snow";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right_snow";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_02.png";
-		this.m.Sprite = "world_townhall_02";
-		this.m.Lighting = "world_townhall_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsSnowSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = false;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

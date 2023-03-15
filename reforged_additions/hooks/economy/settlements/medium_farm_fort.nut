@@ -1,36 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_farm_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Haselburg",
-			"Hageburg",
-			"Marksburg",
-			"Wehrburg",
-			"Hemmelsburg",
-			"Weissenburg",
-			"Grafenburg",
-			"Tiefenburg",
-			"Grunburg",
-			"Wallburg",
-			"Koppelburg",
-			"Weideburg",
-			"Auenburg",
-			"Gardeburg",
-			"Friedland",
-			"Kroonsburg",
-			"Grasburg",
-			"Thalburg",
-			"Weihersburg",
-			"Sommerburg",
-			"Freudburg",
-			"Feldburg",
-			"Langenburg",
-			"Heuburg",
-			"Muhlburg",
-			"Weisenburg",
-			"Weinburg"
-		]);
+		create();
 		this.m.DraftList = [
 			"gambler_background",
 			"farmhand_background",
@@ -54,23 +26,6 @@
 			"cripple_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "A stone keep surrounded by fertile lands";
-		this.m.Description = "A stone keep surrounded by fertile lands and acting as a strongpoint and base of operations in the region.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_02.png";
-		this.m.Sprite = "world_stronghold_02";
-		this.m.Lighting = "world_stronghold_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsFarmingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = true;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4;
 	}
 
 	o.onBuild = function()

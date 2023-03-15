@@ -1,30 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/large_steppe_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Wunderstadt",
-			"Wohlstadt",
-			"Brunnstadt",
-			"Erlstadt",
-			"Himmelstadt",
-			"Sandstadt",
-			"Dornen",
-			"Rothstadt",
-			"Gelbstadt",
-			"Krautmark",
-			"Suderstadt",
-			"Sonstadt",
-			"Strohmark",
-			"Sandmark",
-			"Sonnmark",
-			"Grafenschein",
-			"Hellstadt",
-			"Lichtmark",
-			"Dornland",
-			"Rothenmark",
-			"Brunnenland"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -63,45 +41,16 @@
 			"raider_background",
 			"retired_soldier_background",
 			"sellsword_background",
-			"swordmaster_background",
 			"cripple_background",
 			"eunuch_background",
-			"anatomist_background"
+			"anatomist_background",
+			"nomad_background",
+			"beast_hunter_background",
+			"caravan_hand_southern_background",
+			"peddler_southern_background",
+			"beggar_southern_background",
+			"cripple_southern_background"
 		];
-
-		if (this.Const.DLC.Unhold)
-		{
-			this.m.DraftList.push("beast_hunter_background");
-		}
-
-		if (this.Const.DLC.Desert)
-		{
-			this.m.DraftList.extend([
-				"nomad_background",
-				"caravan_hand_southern_background",
-				"peddler_southern_background",
-				"beggar_southern_background",
-				"cripple_southern_background"
-			]);
-		}
-
-		this.m.UIDescription = "A large city thriving on trade and fine arts";
-		this.m.Description = "A large city thriving in the southern steppe by trading and producing valuable goods and fine arts.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_cobblestone";
-		this.m.UISprite = "ui/settlement_sprites/townhall_03.png";
-		this.m.Sprite = "world_townhall_03";
-		this.m.Lighting = "world_townhall_03_light";
-		this.m.Rumors = this.Const.Strings.RumorsSteppeSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 3;
-		this.m.HousesType = 3;
-		this.m.HousesMin = 3;
-		this.m.HousesMax = 4;
-		this.m.AttachedLocationsMax = 6;
 	}
 
 	o.onBuild = function()

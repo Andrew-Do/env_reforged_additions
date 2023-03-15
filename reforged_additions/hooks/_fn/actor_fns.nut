@@ -87,7 +87,7 @@
 
 
 /////////////////////////////
-//TODO: refactor into one method & use array passed in as parameter, update stats all in one go instead of loop
+//FEATURE_8: refactor into one method & use array passed in as parameter, update stats all in one go instead of loop
 ::mods_hookExactClass("entity/tactical/actor", function(o) {
 
     o.level_resolve <- function( times, stars )

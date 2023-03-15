@@ -53,7 +53,7 @@
 
 	o.onUpdateDraftList = function( _list )
 	{
-		//TODO: rework houndmaster into wolf tamer
+		//FEATURE_8: rework houndmaster into wolf tamer
 		_list.push("houndmaster_background");
 		_list.push("houndmaster_background");
 	}

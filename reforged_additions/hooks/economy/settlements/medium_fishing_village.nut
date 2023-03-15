@@ -1,40 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/medium_fishing_village", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Seedock",
-			"Wikhavn",
-			"Sandhoom",
-			"Sandkai",
-			"Holnishovn",
-			"Holmwader",
-			"Niewekai",
-			"Stohlhoven",
-			"Strandekai",
-			"Kampwader",
-			"Birkhaven",
-			"Sundkajung",
-			"Seehoben",
-			"Krakenwader",
-			"Blankhoom",
-			"Harkendock",
-			"Krumwader",
-			"Saltkai",
-			"Salthaven",
-			"Grotenhoom",
-			"Lutendock",
-			"Kaiwader",
-			"Singhoben",
-			"Weissenhaven",
-			"Tiefenhaven",
-			"Wasserkoog",
-			"Osterstrande",
-			"Steinhaven",
-			"Duhnenhaven",
-			"Neudeich",
-			"Sandehaven"
-		]);
+		create();
 		this.m.DraftList = [
 			"apprentice_background",
 			"beggar_background",
@@ -68,24 +36,6 @@
 			"sellsword_background",
 			"anatomist_background"
 		];
-		this.m.UIDescription = "A larger spread out village relying on fishing and a little trade";
-		this.m.Description = "A larger spread out village relying on fishing and a little trade.";
-		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
-		this.m.UIBackgroundLeft = "ui/settlements/water_01";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/townhall_02.png";
-		this.m.Sprite = "world_townhall_02";
-		this.m.Lighting = "world_townhall_02_light";
-		this.m.Rumors = this.Const.Strings.RumorsFishingSettlement;
-		this.m.Culture = this.Const.World.Culture.Neutral;
-		this.m.IsMilitary = false;
-		this.m.Size = 2;
-		this.m.HousesType = 2;
-		this.m.HousesMin = 2;
-		this.m.HousesMax = 3;
-		this.m.AttachedLocationsMax = 4 + 1;
-		this.m.ProduceString = "fish";
 	}
 
 	o.onBuild = function()

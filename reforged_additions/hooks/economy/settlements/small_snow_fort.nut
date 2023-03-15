@@ -1,45 +1,8 @@
 ::mods_hookExactClass("entity/world/settlements/small_snow_fort", function(o) {
-	o.create = function()
+	local create = o.create;
+	o.create = function()	
 	{
-		this.settlement.create();
-		this.m.Name = this.getRandomName([
-			"Tonderwold",
-			"Hornwold",
-			"Grimtorn",
-			"Helleweir",
-			"Kalkweir",
-			"Lyderswold",
-			"Hornspira",
-			"Sommerspira",
-			"Brammingwold",
-			"Vardegard",
-			"Norrewold",
-			"Birketorn",
-			"Donnerswold",
-			"Tangweir",
-			"Helviktorn",
-			"Torvastorn",
-			"Skjoldwold",
-			"Eidsviktorn",
-			"Halspira",
-			"Gerwold",
-			"Gunnspira",
-			"Asentorn",
-			"Hammarwold",
-			"Holmgard",
-			"Vallgard",
-			"Falkenholm",
-			"Glommenwold",
-			"Gunnweir",
-			"Asatorn",
-			"Kungswold",
-			"Hagenswold",
-			"Lindweir",
-			"Hindaswolt",
-			"Lokewold",
-			"Ringwold",
-			"Hakonswold"
-		]);
+		create();
 		this.m.DraftList = [
 			"beggar_background",
 			"brawler_background",
@@ -56,23 +19,6 @@
 			"retired_soldier_background",
 			"retired_soldier_background"
 		];
-		this.m.UIDescription = "This motte with bailey looks wide over the endless snow";
-		this.m.Description = "This motte with bailey looks wide over the endless snow, and offers shelter from the cold and warm food to the garrison stationed here.";
-		this.m.UIBackgroundCenter = "ui/settlements/stronghold_01_snow";
-		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_01_left_snow";
-		this.m.UIBackgroundRight = "ui/settlements/bg_houses_01_right_snow";
-		this.m.UIRampPathway = "ui/settlements/ramp_01_planks";
-		this.m.UISprite = "ui/settlement_sprites/stronghold_01.png";
-		this.m.Sprite = "world_stronghold_01";
-		this.m.Lighting = "world_stronghold_01_light";
-		this.m.Rumors = this.Const.Strings.RumorsSnowSettlement;
-		this.m.Culture = this.Const.World.Culture.Northern;
-		this.m.IsMilitary = true;
-		this.m.Size = 1;
-		this.m.HousesType = 1;
-		this.m.HousesMin = 1;
-		this.m.HousesMax = 2;
-		this.m.AttachedLocationsMax = 3;
 	}
 
 	o.onBuild = function()
