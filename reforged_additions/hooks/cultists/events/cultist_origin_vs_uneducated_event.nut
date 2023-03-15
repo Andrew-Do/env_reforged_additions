@@ -56,7 +56,7 @@
 			{
 				this.Characters.push(_event.m.Cultist.getImagePath());
 				this.Characters.push(_event.m.Uneducated.getImagePath());
-				local background = this.new("scripts/skills/backgrounds/converted_cultist_background");
+				local background = ::new("scripts/skills/backgrounds/converted_cultist_background");
 				_event.m.Uneducated.getSkills().removeByID(_event.m.Uneducated.getBackground().getID());
 				_event.m.Uneducated.getSkills().add(background);
 				background.buildDescription();
@@ -73,7 +73,7 @@
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Cultist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Cultist.getName() + " gains [color=" + ::Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
 				});
 			}
 

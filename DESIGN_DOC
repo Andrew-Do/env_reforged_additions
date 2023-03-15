@@ -10,9 +10,20 @@ Economy Rework
     - Make everyone poorer except for nobles
     - Rebalance prices, wages, and contract rewards
 Faction Rework
+    Find out how to make factions more meaningful
+    Store faction data as global flags
     Story Rework
         - Trend of events
         - With ambitions?
+    
+    locations store information
+    bandit camp generation?
+        patrols store reference to home
+        caravans store to and from
+            if caravan is destroyed by patrol, increase the power of home. Depending on where the patrol home is closer to, add hatred score for that faction
+            carvan goods will be added to camp
+            
+            if hatred score high enough, generate bandit contract
 City Rework
     - Enemies will stop chasing you after timer
     - Enemies will stop chasing you when you are near city
@@ -25,3 +36,19 @@ City Rework
         - pros and cons
 Noble Contract
     - Champion for hire, compete in 1v1 knight tournament
+
+
+Artifacts
+    Lumina - 1h arcane pistol - can be equipped in mainhand or offhand
+        The last remnants from a race beyond the sky. No one knows how it ended up in this world...
+
+        - Killing an enemy with this weapon will load a special bullet that can be fired at allies, healing them and providing them with the blessing of the sky that lasts the rest of the battle - giving them 33% reroll chance.
+        - adds willpower meter if it doesnt exist
+        - handgonne skills, reload with willpower - focus spirit
+
+
+    Nix - Accessory
+        If the holder has the traits representing 'hate', 'greed', 'despair', 'wrath', each degree of fit will increase the potency of this artifact. All beings within 3 tiles of this character will be inflicted by nix, halving their resolve, combat skills, and decreasing their damage by 33%.
+
+    Cupid's Bow - Bow that charms enemies
+    Storm Star - Morning star that sends chain lightning

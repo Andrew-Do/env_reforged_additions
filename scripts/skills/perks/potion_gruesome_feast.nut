@@ -3,12 +3,12 @@ this.potion_gruesome_feast <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "perk.potion_gruesome_feast";
-		this.m.Name = this.Const.Strings.PerkName.GruesomeFeast;
-		this.m.Description = this.Const.Strings.PerkDescription.GruesomeFeast;
+		this.m.Name = ::Const.Strings.PerkName.GruesomeFeast;
+		this.m.Description = ::Const.Strings.PerkDescription.GruesomeFeast;
 		this.m.Icon = "ui/perks/gruesome_circle.png";
 		this.m.IconDisabled = "ui/perks/gruesome_circle_bw.png";
-		this.m.Type = this.Const.SkillType.Perk;
-		this.m.Order = this.Const.SkillOrder.Perk;
+		this.m.Type = ::Const.SkillType.Perk;
+		this.m.Order = ::Const.SkillOrder.Perk;
 		this.m.IsActive = false;
 		this.m.IsStacking = false;
 		this.m.IsHidden = false;
@@ -18,7 +18,7 @@ this.potion_gruesome_feast <- this.inherit("scripts/skills/skill", {
 	{
 		if (!this.m.Container.hasSkill("actives.potion_gruesome_feast"))
 		{
-			this.m.Container.add(this.new("scripts/skills/actives/potion_gruesome_feast"));
+			this.m.Container.add(::new("scripts/skills/actives/potion_gruesome_feast"));
 		}
 	}
 

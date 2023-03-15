@@ -19,7 +19,7 @@
 		return ret;
 	}
 
-	o.onUpdate = function( _properties )
+	o.onUpdate <- function( _properties )
 	{
 		// local has = this.has_penance();
 		// _properties.MeleeDefenseMult *= has ? 0.9 : 0.6;

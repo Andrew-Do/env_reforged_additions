@@ -62,7 +62,8 @@ def parsePrice(root, fname):
                     if len(temp) > 0:
                         Equipment.append(temp[:])
                         temp.clear()
-                if 'this.new("scripts' in line:
+                if '::new("scripts' in line:
+                    if ('ammo' in line): continue
                     query = re.findall(r'"(.+?)"', line)[0]
                     script_path = f'\"{query}\"'
                     if not ('equip', script_path) in temp:
@@ -95,9 +96,9 @@ for fname in os.listdir(root):
 # simply just replace in output file
 
 # with open(os.path.join(out, f'Ω_economy_background_wages.nut'), "w+") as f_out:
-#     f_out.write('::Const.Backgrounds <- {};\n')
-#     f_out.write('::Const.Backgrounds.Equipment <- {};\n')
-#     f_out.write('::Const.Backgrounds.Wages <- {\n')
+#     f_out.write('::Z.Backgrounds <- {};\n')
+#     f_out.write('::Z.Backgrounds.Equipment <- {};\n')
+#     f_out.write('::Z.Backgrounds.Wages <- {\n')
 #     for key in Backgrounds:
 #         if key == None: continue
 #         f_out.write(f'\t{key}' + ' : {\n')
@@ -107,34 +108,30 @@ for fname in os.listdir(root):
 
 #     f_out.write('};')
 
-lst_backgrounds = []
-with open(os.path.join(out, f'Ω_economy_background_wages.nut'), "w+") as f_out:
-    for line in f_out.readlines():
-        if '"background.' in line:
-            query = re.findall(r'"(.+?)"', line)[0]
-            id = f'\"{query}\"'
-            lst_backgrounds.append(id)
-        
 
-# TODO: Refactor code to put in one file
-# TODO: handle removing ammo and daggers from lists if bow exists
-# TODO: in armor script, add dagger to bag and appropriate ammo for weapon
-# TODO: in generation script, do not add shields if 2h
-# TODO: in generation script, do not add tools if 2h
-# TODO: modify table entries for shields or tools
-# for key in Backgrounds:
-#     if key == None: continue
-#     id = key.replace('background.', '').replace('"', '')
-#     with open(os.path.join(out, f'ΩΩ_{id}.nut'), "w+") as f_out:
-        
-#         f_out.write(f'::Const.Backgrounds.Equipment[{key}]' + ' <- [\n')
+# Get backgrounds order from file
+# lst_backgrounds = []
+# with open(os.path.join(out, f'Ω_economy_background_wages.nut')) as f_out:
+#     for line in f_out.readlines():
+#         if '"background.' in line:
+#             query = re.findall(r'"(.+?)"', line)[0]
+#             id = f'\"{query}\"'
+#             lst_backgrounds.append(id)
+
+# with open(os.path.join(out, f'Ω_economy_background_Ωequipment.nut'), "w+") as f_out:
+#     for i, key in enumerate(lst_backgrounds):
+#         if Backgrounds[key]["Equipment"] == []: continue
+#         f_out.write(f'::Z.Backgrounds.Equipment[{key}]' + ' <- [\n')
 #         for i, n in enumerate(Backgrounds[key]["Equipment"]):
 #             f_out.write(f'\t[\n')
 #             for item in n:
 #                 f_out.write(f'\t\t{item[1]},\n')
 #             f_out.write(f'\t],\n')
 
-#         f_out.write('];')
+#         if i == len(lst_backgrounds):
+#             f_out.write('];')
+#         else:
+#             f_out.write('];\n\n')
             
 
 
