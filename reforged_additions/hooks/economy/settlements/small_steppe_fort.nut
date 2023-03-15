@@ -33,7 +33,6 @@
 		this.m.DraftList = [
 			"caravan_hand_background",
 			"caravan_hand_background",
-			"houndmaster_background",
 			"daytaler_background",
 			"mason_background",
 			"militia_background",

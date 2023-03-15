@@ -40,7 +40,6 @@
 		]);
 		this.m.DraftList = [
 			"cultist_background",
-			"houndmaster_background",
 			"daytaler_background",
 			"hunter_background",
 			"militia_background",

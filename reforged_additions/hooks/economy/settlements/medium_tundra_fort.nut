@@ -39,7 +39,6 @@
 			"Lundirsholm"
 		]);
 		this.m.DraftList = [
-			"houndmaster_background",
 			"bowyer_background",
 			"brawler_background",
 			"daytaler_background",

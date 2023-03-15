@@ -32,7 +32,6 @@
 		]);
 		this.m.DraftList = [
 			"apprentice_background",
-			"houndmaster_background",
 			"bowyer_background",
 			"bowyer_background",
 			"brawler_background",

@@ -35,7 +35,6 @@
 		this.m.DraftList = [
 			"farmhand_background",
 			"farmhand_background",
-			"houndmaster_background",
 			"mason_background",
 			"messenger_background",
 			"militia_background",

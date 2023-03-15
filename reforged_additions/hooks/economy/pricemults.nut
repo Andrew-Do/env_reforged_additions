@@ -3,6 +3,26 @@
 //TODO: armor repair tools price is bugged
 ::mods_hookExactClass("entity/world/settlement", function(o)
 {
+    o.getPriceMult = function()
+	{
+		local p;
+
+		if (this.m.Size <= 1)
+		{
+			p = 0.95 + this.getActiveAttachedLocations().len() * 0.03;
+		}
+		else if (this.m.Size == 2)
+		{
+			p = 1.02 + this.getActiveAttachedLocations().len() * 0.03;
+		}
+		else if (this.m.Size == 3)
+		{
+			p = 1.1 + this.getActiveAttachedLocations().len() * 0.03;
+		}
+
+		return p * this.m.Modifiers.PriceMult;
+	}
+
     o.getBuyPriceMult = function()
     {
         local p = this.getPriceMult() * this.World.Assets.getBuyPriceMult();

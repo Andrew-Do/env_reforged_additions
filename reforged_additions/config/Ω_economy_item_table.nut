@@ -69,14 +69,16 @@
 	"weapon.player_banner" : 137,
 
 	//Accessories
-	//FEATURE_1: Remove dog events
 	"accessory.cursed_crystal_skull" : 250, //FEATURE_6: Artifact rework + unlock event, must be equipped
 	"accessory.wardog" : 12,
 	"accessory.armored_wardog" : 48, //TODO: Remove
 	"accessory.armored_warhound" : 72, //TODO: Remove
 	"accessory.heavily_armored_wardog" : 78, //TODO: Remove
 	"accessory.heavily_armored_warhound" : 108, //TODO: Remove
-	"accessory.warwolf" : 200, //Trained direwolf
+	"accessory.warwolf" : 200, //TODO: Remove
+	//FEATURE_6: Create tamed direwolf item
+	//if released by non-wolf master bro, 75% chance that it will be wild and attack allies
+
 	"accessory.falcon" : 100,
 	"accessory.oathtaker_skull_01" : 0,
 	"accessory.oathtaker_skull_02" : 0,

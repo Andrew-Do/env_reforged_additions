@@ -34,7 +34,6 @@
 		this.m.DraftList = [
 			"apprentice_background",
 			"apprentice_background",
-			"houndmaster_background",
 			"brawler_background",
 			"caravan_hand_background",
 			"gambler_background",
